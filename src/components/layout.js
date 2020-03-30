@@ -19,7 +19,7 @@ const Layout = ({ location, title, children }) => {
         <Link
           style={{
             boxShadow: `none`,
-            color: `inherit`,
+            color: `#cc6b87`,
           }}
           to={`/`}
         >
@@ -38,7 +38,7 @@ const Layout = ({ location, title, children }) => {
         <Link
           style={{
             boxShadow: `none`,
-            color: `inherit`,
+            color: `#cc6b87`,
           }}
           to={`/`}
         >
@@ -58,11 +58,6 @@ const Layout = ({ location, title, children }) => {
     >
       <header>{header}</header>
       <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </footer>
     </div>
   )
 }

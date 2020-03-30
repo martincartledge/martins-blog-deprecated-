@@ -57,11 +57,8 @@ const Bio = () => {
         }}
       />
       <p>
-        Written by <strong>{author.name}</strong> {author.summary}
-        {` `}
-        <a href={`https://twitter.com/${social.twitter}`}>
-          You should follow him on Twitter
-        </a>
+        I love learning and sharing my knowledge with others. I also enjoy
+        spending time with my wife and two Golden Retrievers, Nikita and Willow.
       </p>
     </div>
   )
