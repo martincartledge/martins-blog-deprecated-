@@ -187,11 +187,11 @@ func main() {
 }
 ```
 
-As you can see above, I declare a variable with the name `a` of the type `int`. Next, I use the `type` keyword to define a new `int` type with the name `hotdog`. Something to note here is that although I declared a new type called `midichlorian`, it's _underlying_ type is `int`.
+As you can see above, I declare a variable with the name `a` of the type `int`. Next, I use the `type` keyword to define a new `int` type with the name `midichlorian`. Something to note here is that although I declared a new type called `midichlorian`, it's _underlying_ type is `int`.
 
 ## "Convert" not "Cast"
 
-It would only make sense that due to Go's strong, statically typed ethos that converting values would be a completely deliberate action. In JavaScript this is referred to as _type casting_, and it not completely reliable. Go takes a different approach - you _convert_ a value's type, you do not _cast a type_. I will demonstrate below.
+It would only make sense that due to Go's strong, statically typed ethos that converting values would be a completely deliberate action. In JavaScript this is referred to as _type casting_, and is not completely reliable. Go takes a different approach - you _convert_ a value's type, you do not _cast a type_. I will demonstrate below.
 
 ```
 package main
