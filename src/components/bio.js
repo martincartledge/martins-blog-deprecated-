@@ -41,6 +41,7 @@ const Bio = () => {
       style={{
         display: `flex`,
         marginBottom: rhythm(2.5),
+        flexWrap: `wrap`,
       }}
     >
       <Image
@@ -56,10 +57,66 @@ const Bio = () => {
           borderRadius: `50%`,
         }}
       />
-      <p>
+      <p style={{ margin: `1rem 0` }}>
         I love learning and sharing my knowledge with others. I also enjoy
         spending time with my wife and two Golden Retrievers, Nikita and Willow.
       </p>
+      <span
+        style={{
+          display: `flex`,
+          justifyContent: `space-between`,
+          minWidth: `20rem`,
+        }}
+      >
+        <a
+          alt="martin-cartledge-email"
+          href="mailto:sayheytomartin@gmail.com"
+          target="_blank"
+          style={{
+            boxShadow: `none`,
+            textDecoration: `underline`,
+            color: `#cc6b87`,
+          }}
+        >
+          Email
+        </a>
+        <a
+          alt="martin-cartledge-github"
+          href="https://github.com/martincartledge"
+          target="_blank"
+          style={{
+            boxShadow: `none`,
+            textDecoration: `underline`,
+            color: `#cc6b87`,
+          }}
+        >
+          GitHub
+        </a>
+        <a
+          alt="martin-cartledge-medium"
+          href="https://medium.com/@spindriftboi"
+          target="_blank"
+          style={{
+            boxShadow: `none`,
+            textDecoration: `underline`,
+            color: `#cc6b87`,
+          }}
+        >
+          Medium
+        </a>
+        <a
+          alt="martin-cartledge-linkedin"
+          href="https://www.linkedin.com/in/martincartledge/"
+          target="_blank"
+          style={{
+            boxShadow: `none`,
+            textDecoration: `underline`,
+            color: `#cc6b87`,
+          }}
+        >
+          LinkedIn
+        </a>
+      </span>
     </div>
   )
 }
