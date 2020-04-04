@@ -5,7 +5,7 @@ date: "2020-04-04T22:40:32.169Z"
 
 This is the second entry of my weekly series _Learning Go_. Last week I discussed the history of Go, its thought foundations, variables, and types. This week I dove into _fairly_ familiar territory. A lot of concepts came to me quickly due to my background in JavaScript; however, it was really cool to dig into the differences in how these concepts are implemented in another language. Let's get to it.
 
-## Control Flow, whats' that?
+## Control Flow, what's that?
 
 > the order in which individual statements, instructions, or function calls an imperative program are executed or evaluate
 
@@ -74,7 +74,7 @@ func main() {
 
 #### _"range" clause_
 
-A range clause is used to iterate though all entires of a slice, array, string, map, or values received from a channel (we will dive into channels in a later entry). I will demonstrate using a `slice` type - we will dive deeper into this type later.
+A range clause is used to iterate though all entries of a slice, array, string, map, or values received from a channel (we will dive into channels in a later entry). I will demonstrate using a `slice` type - we will dive deeper into this type later.
 
 ```
 package main
@@ -130,7 +130,7 @@ func main() {
 
 Let me walk you through what is happening here:
 
-- inside of the `main` function we declare the variable a and assign it to the value `0` 
+- inside of the `main` function we declare the variable `n` and assign it to the value `0` 
 - we use the `for` keyword to create a loop
 - inside of the loop we use the `++` operator to increment `n` by 1
 - using an `if` statement, we evaluate if the value of `n` is great than `5` 
