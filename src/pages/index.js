@@ -40,6 +40,7 @@ const BlogIndex = ({ data, location }) => {
           </article>
         )
       })}
+      <SignUpForm />
     </Layout>
   )
 }
