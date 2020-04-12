@@ -52,12 +52,16 @@ const Layout = ({ location, title, children }) => {
       style={{
         marginLeft: `auto`,
         marginRight: `auto`,
-        maxWidth: rhythm(24),
+        maxWidth: `780px`,
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+        display: `flex`,
+        flexDirection: `column`,
+        width: `100%`,
+        minHeight: `100vh`,
       }}
     >
       <header>{header}</header>
-      <main>{children}</main>
+      <>{children}</>
     </div>
   )
 }

@@ -15,32 +15,41 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="Blog" />
       <Bio />
-      {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug
-        return (
-          <article key={node.fields.slug}>
-            <header>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link
+      <div
+        style={{
+          width: `100%`,
+          maxWidth: `780px`,
+          margin: `0px auto`,
+          flex: `1 0 auto`,
+        }}
+      >
+        {posts.map(({ node }) => {
+          const title = node.frontmatter.title || node.fields.slug
+          return (
+            <article key={node.fields.slug}>
+              <header>
+                <h3
                   style={{
-                    boxShadow: `none`,
-                    textDecoration: `underline`,
-                    color: `#cc6b87`,
+                    marginBottom: rhythm(1 / 4),
+                    fontFamily: `Montserrat, sans-serif`,
                   }}
-                  to={node.fields.slug}
                 >
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-            </header>
-          </article>
-        )
-      })}
+                  <Link
+                    style={{
+                      boxShadow: `none`,
+                      color: `#cc6b87`,
+                    }}
+                    to={node.fields.slug}
+                  >
+                    {title}
+                  </Link>
+                </h3>
+                <small>{node.frontmatter.date}</small>
+              </header>
+            </article>
+          )
+        })}
+      </div>
       <SignUpForm />
     </Layout>
   )

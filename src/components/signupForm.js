@@ -1,30 +1,38 @@
-import React from "react"
+import React, { useState } from "react"
+const GATSBY_API_KEY = process.env.GATSBY_API_KEY
 
-const processForm = form => {
-  const data = new FormData(form)
-  data.append("form-name", "newsletter")
-  fetch("/", {
-    method: "POST",
-    body: data,
-  })
-    .then(() => {
-      form.innerHTML = `<div class="form--success">Almost there! Check your inbox for a confirmation e-mail.</div>`
-    })
-    .catch(error => {
-      form.innerHTML = `<div class="form--error">Error: ${error}</div>`
-    })
+const handleSubmit = async (values, setMessage) => {
+  console.log("handleSubmit -> values", values)
+  const data = { ...values, referrer_url: "https://martincartledge.io" }
+  try {
+    const response = await fetch(
+      "https://api.buttondown.email/v1/subscribers",
+      {
+        body: JSON.stringify(data),
+        method: "post",
+        headers: {
+          Accept: "application/json",
+          Authorization: `Token ${GATSBY_API_KEY}`,
+          "Content-Type": "application/json",
+        },
+      }
+    )
+    if (response.ok) {
+      setMessage("User created!")
+    } else {
+      setMessage("Something went wrong!")
+    }
+  } catch (error) {
+    setMessage("Something went wrong")
+  }
 }
 
 const SignUpForm = () => {
-  const emailForm = document.querySelector(".email-form")
-  if (emailForm) {
-    emailForm.addEventListener("submit", e => {
-      e.preventDefault()
-      processForm(emailForm)
-    })
-  }
+  const [email, setEmail] = useState("")
+  const [message, setMessage] = useState("")
   return (
     <>
+      {message && <p>{message}</p>}
       <p>
         Subscribe to my blog for more programming, pictures of golden
         retrievers, and ping pong.
@@ -35,7 +43,11 @@ const SignUpForm = () => {
         method="POST"
         data-netlify="true"
         netlify-honeypot="bot-field"
-        onSubmit={processForm}
+        onSubmit={e => {
+          e.preventDefault()
+          handleSubmit({ email: email }, setMessage)
+          setEmail("")
+        }}
       >
         <div hidden aria-hidden="true">
           <label>
@@ -50,6 +62,8 @@ const SignUpForm = () => {
             name="email"
             placeholder="shrutefarms@gmail.com"
             id="email"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
             required
           />
           <button
