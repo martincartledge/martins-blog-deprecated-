@@ -150,7 +150,7 @@ Here we have done a few things:
 - created a distinct type `HasTheForce`
 - bound the identifier `HasTheForce` to it
 
-_this distinct type has the same type and it's underlying type: `bool`_
+_this distinct type has the same type and its underlying type: `bool`_
 
 ## Boolean
 
@@ -162,7 +162,7 @@ Note: the predeclared `boolean` type is `bool`
 
 > represents a set of integers or floating-point values
 
-These types get pretty extensive, for now I will show the differences between integers and floating point.
+These types get pretty extensive, for now, I will show the differences between integers and floating-point.
 
 _Integers_
 
@@ -311,12 +311,10 @@ As you can assume, this can potentially take a lot of processing power. To avoid
 ```
 package main
 
-import (
-	"fmt"
-)
-
 func main() {
 	a := make([]int, 10 , 10)
+    fmt.Println(a)
+    // [0 0 0 0 0 0 0 0 0 0]
 }
 ```
 
