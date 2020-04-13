@@ -21,6 +21,7 @@ const BlogIndex = ({ data, location }) => {
           maxWidth: `780px`,
           margin: `0px auto`,
           flex: `1 0 auto`,
+          marginBottom: `5rem`,
         }}
       >
         {posts.map(({ node }) => {

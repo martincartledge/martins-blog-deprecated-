@@ -55,7 +55,9 @@ const SignUpForm = () => {
             <input name="bot-field" />
           </label>
         </div>
-        <label htmlFor="email">Email:</label>
+        <label htmlFor="email" style={{ fontFamily: `Montserrat, sans-serif` }}>
+          Email:
+        </label>
         <div>
           <input
             type="email"
@@ -65,12 +67,23 @@ const SignUpForm = () => {
             value={email}
             onChange={e => setEmail(e.target.value)}
             required
+            style={{
+              background: `#ffffff`,
+              color: `#cc6b87`,
+              border: `0`,
+              height: `2rem`,
+              padding: `1rem 1rem 1rem 0`,
+              borderBottom: `.025rem solid #000000e6`,
+            }}
           />
           <button
             type="submit"
             style={{
-              background: `transparent`,
-              color: `#cc6b87`,
+              background: `#cc6b87`,
+              color: `#ffffff`,
+              border: `0`,
+              height: `2rem`,
+              marginLeft: `1rem`,
             }}
           >
             Subscribe
