@@ -69,11 +69,13 @@ const SignUpForm = () => {
             required
             style={{
               background: `#ffffff`,
-              color: `#cc6b87`,
+              color: `#000000e6`,
               border: `0`,
               height: `2rem`,
-              padding: `1rem 1rem 1rem 0`,
-              borderBottom: `.025rem solid #000000e6`,
+              padding: `.5rem`,
+              border: `.025rem solid #000000e6`,
+              width: `80%`,
+              maxWidth: `15rem`,
             }}
           />
           <button
@@ -83,7 +85,7 @@ const SignUpForm = () => {
               color: `#ffffff`,
               border: `0`,
               height: `2rem`,
-              marginLeft: `1rem`,
+              width: `auto`,
             }}
           >
             Subscribe
