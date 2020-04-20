@@ -81,8 +81,8 @@ const Bio = () => {
           Email
         </a>
         <a
-          alt="martin-cartledge-github"
-          href="https://github.com/martincartledge"
+          alt="martin-cartledge-twitter"
+          href="https://twitter.com/spindriftboi"
           target="_blank"
           style={{
             boxShadow: `none`,
@@ -90,7 +90,7 @@ const Bio = () => {
             color: `#cc6b87`,
           }}
         >
-          GitHub
+          Twitter
         </a>
         <a
           alt="martin-cartledge-medium"
