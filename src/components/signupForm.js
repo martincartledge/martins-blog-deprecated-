@@ -18,7 +18,7 @@ const handleSubmit = async (values, setMessage) => {
       }
     )
     if (response.ok) {
-      setMessage("User created!")
+      setMessage("Subscribed successfully!")
     } else {
       setMessage("Something went wrong!")
     }
