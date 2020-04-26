@@ -40,7 +40,7 @@ func main() {
 
 In the example above, I am creating a new `struct` of type `car`. 
 
-- first, I declare that you are creating a new `type`
+- first, I declare that I am creating a new `type`
 - then I declare an identifier for this `type`, in this case, our `type` is `car`
 - we declare our new type, `car`, to have the _underlying_ type of `struct`
 - next, we list out the `field names` paired with their `type`
@@ -149,15 +149,15 @@ func main() {
 }
 ```
 
-This example is identical to the previous; however, the change to note here is what is happening inside of the `speak` method.
+This example is identical to the previous; however, the change to note here is what is happening inside of the `start` method.
 
 - we see that we still have a _receiver type_ of `toyota` with a _receiver value_ `t`
 - if we take a look at the `toyota` type, we see that it has three _field names_: `model`, `color`, and `year`
 - inside of `func` `main` we are creating a new variable named `t`
 - using a [composite literal](https://golang.org/ref/spec#Composite_literals), we assign the variable `t` to be of type `toyota` and assign the values `tacoma`, `white`, and `2020` to their respective _field names_
-- this is where the magic happens: using dot notation, we call the `speak` method from `t`
-- because `t` is of type `toyota` it has access to the `speak` method
-- inside of `speak` we are again using dot notation to print out the values of the fields found in `toyota`
+- this is where the magic happens: using dot notation, we call the `start` method from `t`
+- because `t` is of type `toyota` it has access to the `start` method
+- inside of `start` we are again using dot notation to print out the values of the fields found in `toyota`
 
 ## Interfaces
 
