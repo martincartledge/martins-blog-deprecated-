@@ -15,7 +15,7 @@ const BlogIndex = ({ data, location }) => {
       <div
         style={{
           width: `100%`,
-          maxWidth: `780px`,
+          maxWidth: `900px`,
           margin: `0px auto`,
           flex: `1 0 auto`,
           marginBottom: `5rem`,

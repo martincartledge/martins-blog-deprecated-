@@ -51,6 +51,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             justifyContent: `space-between`,
             listStyle: `none`,
             padding: 0,
+            margin: 0,
           }}
         >
           <li>

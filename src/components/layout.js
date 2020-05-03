@@ -102,7 +102,7 @@ const Layout = ({ children }) => {
       style={{
         marginLeft: `auto`,
         marginRight: `auto`,
-        maxWidth: `780px`,
+        maxWidth: `900px`,
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         display: `flex`,
         flexDirection: `column`,
