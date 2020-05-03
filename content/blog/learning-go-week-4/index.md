@@ -1,6 +1,7 @@
 ---
 title: Learning Go Week 4
 date: "2020-04-19T22:40:32.169Z"
+description: "Slice and Map"
 ---
 
 This is the fourth entry of my weekly series _Learning Go_. Last week I covered a few common _types_ in Go: `Boolean`, `Numeric`, `String`, `Array`, and `Slice`. This week I will cover a few more pieces of `Slice`, and will talk about the `Map` type as well.

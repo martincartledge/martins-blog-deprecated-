@@ -1,6 +1,7 @@
 ---
 title: Learning Go Week 2
 date: "2020-04-04T22:40:32.169Z"
+description: "Control flow and common control structures"
 ---
 
 This is the second entry of my weekly series _Learning Go_. Last week I discussed the history of Go, its thought foundations, variables, and types. This week I dove into _fairly_ familiar territory. A lot of concepts came to me quickly due to my background in JavaScript; however, it was really cool to dig into the differences in how these concepts are implemented in another language. Let's get to it.
@@ -8,7 +9,6 @@ This is the second entry of my weekly series _Learning Go_. Last week I discusse
 ## Control Flow, what's that?
 
 > the order in which individual statements, instructions, or function calls an imperative program are executed or evaluate
-
 
 I felt like I understood the concept of something like _control flow_ prior to learning about its place in computer science; however, understanding its meaning paired with _control structures_ enabled me to envision how my code is executed with much more clarity.
 
@@ -22,11 +22,11 @@ Essentially, this is the concept we use to determine how our code will be interp
 
 > a sequence of instructions that are continually repeated until a specified condition is met
 
-Whether you have been programming for 10 months or 10 years, chances are you have probably used loops quite often. I will not spend much time going into the mechanics of how loops work, but I do want to address the fundamentals of them. You can break down what I call the _three pillars_ of a loop fairly simply. These three pillars are an *init statement*, *condition statement*, and a *post statement*. Of course, we have code that is run in the loop body _as long as the condition statement is `true` after an iteration_.
+Whether you have been programming for 10 months or 10 years, chances are you have probably used loops quite often. I will not spend much time going into the mechanics of how loops work, but I do want to address the fundamentals of them. You can break down what I call the _three pillars_ of a loop fairly simply. These three pillars are an _init statement_, _condition statement_, and a _post statement_. Of course, we have code that is run in the loop body _as long as the condition statement is `true` after an iteration_.
 
 ```
 for init statement; condition statement; post statement {
-    // code that is executed in each iteration of the loop  
+    // code that is executed in each iteration of the loop
 }
 ```
 
@@ -44,7 +44,7 @@ When using the `for` keyword, you are creating what is called a _for statement_.
 
 #### _Single Condition_
 
-In a single condition statement the condition after the _for_ keyword is evaluated before an execution is ran. In order for the code to be executed, the condition must be evaluated as `true`. 
+In a single condition statement the condition after the _for_ keyword is evaluated before an execution is ran. In order for the code to be executed, the condition must be evaluated as `true`.
 
 ```
 for 1 < 2 {
@@ -52,8 +52,8 @@ for 1 < 2 {
 }
 ```
 
-
 #### _"for" clause_
+
 This is what most would find as the _traditional_ for loop they use. In this use of the _for_ keyword, we use the _three pillars_ of a loop: init statement, condition statement, and a post statement.
 
 ```
@@ -65,7 +65,7 @@ func main() {
     for i := 0; i <= 3; i++ {
         fmt.Println(i)
     }
-    // 0    
+    // 0
     // 1
     // 2
     // 3
@@ -103,9 +103,9 @@ What is happening up there?
 
 > Important Note: Slices and Arrays are zero indexed - meaning the value of `index` will always start from `0`, not `1`
 
-
 ## Break statements
->stops (terminates) execution of the innermost `for`, `switch`, or `select` statement
+
+> stops (terminates) execution of the innermost `for`, `switch`, or `select` statement
 
 I like to think of _break statements_ like an escape hatch for your code. If there is a condition in which you do not want to continue to iterate, a `break` statement is the best way to stop execution and move to the next piece of executable code.
 
@@ -130,16 +130,16 @@ func main() {
 
 Let me walk you through what is happening here:
 
-- inside of the `main` function we declare the variable `n` and assign it to the value `0` 
+- inside of the `main` function we declare the variable `n` and assign it to the value `0`
 - we use the `for` keyword to create a loop
 - inside of the loop we use the `++` operator to increment `n` by 1
-- using an `if` statement, we evaluate if the value of `n` is great than `5` 
+- using an `if` statement, we evaluate if the value of `n` is great than `5`
 - using the `fmt` package from the `Standard Library` from go, we print the current value of `n`
 - we iterate `5 times` until `n`'s value is greater than 5  -  then we use the `break` keyword and the execution is finished
 
 ## Continue statements
 
->beings the next iteration of the innermost for loop at its post statement
+> beings the next iteration of the innermost for loop at its post statement
 
 I mentioned earlier that go does not have a _while_ loop  -  I have found that using the `continue` statement inside of a `for` loop can render the same results
 
@@ -170,13 +170,13 @@ func main() {
 
 In the example above I am trying to `find all numbers evenly divisible by 2`, let me walk you through how I am doing that using the `break` and `continue` statements:
 
-- inside of the `main` function we declare a variable `n` and assign it to the value `1` 
+- inside of the `main` function we declare a variable `n` and assign it to the value `1`
 - we use the `for` keyword to create a loop
 - inside of the loop we use the `++` operator to increment `n` by 1
 - using an `if` statement, we evaluate if the value of `n` is great than `10` , this evaluates to `false` for the first `10` iterations
-- next, each iteration will evaluate if the value of `n` is *_not_* _evenly_ divisible by 2, we can determine this by using the `modulo` operator
-- the values that are less than 10 *and* not evenly divisible by 2 do not step inside either `if` statement
-- using the `fmt` package from the `Standard Library` from go, we print the current value of `n` 
+- next, each iteration will evaluate if the value of `n` is _*not*_ _evenly_ divisible by 2, we can determine this by using the `modulo` operator
+- the values that are less than 10 _and_ not evenly divisible by 2 do not step inside either `if` statement
+- using the `fmt` package from the `Standard Library` from go, we print the current value of `n`
 - note: _only numbers evenly divisible by 2 be printed _ -  this is because their values do not evaluate to `true` for either `if` statement
 
 ## Conditional statements
@@ -211,7 +211,6 @@ A fairly straight forward example. Inside of the `main` function we declare a va
 
 > Important Note: coming from JavaScript I am used to using the `===` operator to evaluate strict type and value comparisons, as you can see in go the operator looks like this `==`.
 
-
 #### else if
 
 ```
@@ -231,12 +230,13 @@ func main() {
 }
 ```
 
-The only difference here is that we are adding an additional `branch` that can be executed if it is evaluated to `true`. Instead of two branches (as seen in the last example), we now have three. This allows you to add some dynamic aspects to your function. 
+The only difference here is that we are adding an additional `branch` that can be executed if it is evaluated to `true`. Instead of two branches (as seen in the last example), we now have three. This allows you to add some dynamic aspects to your function.
 
-*_All_* `if` statements need to start with an if branch and must have an `else` branch to serve as a `default`; however, between those branches you are free to add as many `else if` branches as you please. Although adding multiple is not advisable in most cases due to code readability and potentially performance.
+_*All*_ `if` statements need to start with an if branch and must have an `else` branch to serve as a `default`; however, between those branches you are free to add as many `else if` branches as you please. Although adding multiple is not advisable in most cases due to code readability and potentially performance.
 
 ## Switch statements
-> provides multi-way execution. an expression or type specifier is compared to each *case* inside of the *switch* statement
+
+> provides multi-way execution. an expression or type specifier is compared to each _case_ inside of the _switch_ statement
 
 - switch statements must have a _default_ case
 - if no expression is found for a case, it's value is `true`
@@ -323,6 +323,7 @@ func main() {
     }
 }
 ```
+
 ## In summary
 
 This week was a great refresher on how the mechanics of how loops, the `for` keyword, and conditional statements work. There is always so much more you can learn about them as well. I look forward to using these more thoughtfully in the future. Next week I will be diving into common data types in go. See you then!

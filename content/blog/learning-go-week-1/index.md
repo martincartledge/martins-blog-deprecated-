@@ -1,6 +1,7 @@
 ---
 title: Learning Go Week 1
 date: "2020-03-29T22:40:32.169Z"
+description: "History of Go, variables, and types"
 ---
 
 This is the beginning of a blog series I am going to be releasing on a weekly basis. I'll be writing about my experiences and findings as I learn to use the Go programming language. I am learning using a handful of forms of media: video, books, and lectures. For this week, I will be discussing what I have learned having completed ~ 25 video segments of [Todd McLeod's](https://twitter.com/todd_mcleod?lang=en) course.

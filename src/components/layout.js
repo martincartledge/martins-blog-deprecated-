@@ -1,52 +1,102 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import { rhythm, scale } from "../utils/typography"
+import { rhythm } from "../utils/typography"
 
-const Layout = ({ location, title, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`
-  let header
-
-  if (location.pathname === rootPath) {
-    header = (
-      <h1
-        style={{
-          ...scale(1.5),
-          marginBottom: rhythm(1.5),
-          marginTop: 0,
-        }}
-      >
-        <Link
-          style={{
-            boxShadow: `none`,
-            color: `#cc6b87`,
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
-      </h1>
-    )
-  } else {
-    header = (
-      <h3
+const Layout = ({ children }) => {
+  const header = (
+    <ul
+      style={{
+        display: `flex`,
+        justifyContent: `space-between`,
+        flexWrap: `wrap`,
+      }}
+    >
+      <h5
         style={{
           fontFamily: `Montserrat, sans-serif`,
-          marginTop: 0,
+          width: `5.5rem`,
+          padding: `.5rem .5rem .5rem 0`,
         }}
       >
-        <Link
+        martin cartledge
+      </h5>
+      <h5
+        style={{
+          fontFamily: `Montserrat, sans-serif`,
+          width: `5.5rem`,
+          padding: `.5rem`,
+        }}
+      >
+        <a
           style={{
             boxShadow: `none`,
             color: `#cc6b87`,
           }}
-          to={`/`}
+          href="/"
         >
-          {title}
-        </Link>
-      </h3>
-    )
-  }
+          home
+        </a>
+      </h5>
+      <h5 style={{ width: `5.5rem`, padding: `.5rem` }}>
+        <a
+          alt="martin-cartledge-email"
+          href="mailto:sayheytomartin@gmail.com"
+          target="_blank"
+          style={{
+            boxShadow: `none`,
+            color: `#cc6b87`,
+            fontFamily: `Montserrat, sans-serif`,
+          }}
+        >
+          email
+        </a>
+      </h5>
+      <h5 style={{ width: `5.5rem`, padding: `.5rem` }}>
+        <a
+          alt="martin-cartledge-twitter"
+          href="https://twitter.com/spindriftboi"
+          target="_blank"
+          style={{
+            boxShadow: `none`,
+            color: `#cc6b87`,
+            fontFamily: `Montserrat, sans-serif`,
+          }}
+        >
+          twitter
+        </a>
+      </h5>
+      <h5 style={{ width: `5.5rem`, padding: `.5rem` }}>
+        <a
+          alt="martin-cartledge-medium"
+          href="https://medium.com/@spindriftboi"
+          target="_blank"
+          style={{
+            boxShadow: `none`,
+            color: `#cc6b87`,
+            fontFamily: `Montserrat, sans-serif`,
+          }}
+        >
+          medium
+        </a>
+      </h5>
+      <h5 style={{ width: `5.5rem`, padding: `.5rem` }}>
+        <a
+          alt="martin-cartledge-linkedin"
+          href="https://www.linkedin.com/in/martincartledge/"
+          target="_blank"
+          style={{
+            boxShadow: `none`,
+            color: `#cc6b87`,
+            fontFamily: `Montserrat, sans-serif`,
+          }}
+        >
+          linkedin
+        </a>
+      </h5>
+    </ul>
+  )
+
   return (
     <div
       style={{

@@ -1,16 +1,16 @@
 ---
 title: Learning Go Week 5
 date: "2020-04-26T22:40:32.169Z"
+description: "Struct and Interface"
 ---
 
 This is the fifth entry of my weekly series _Learning Go_. Last week I covered a few more pieces of the `Slice` and `Map` type. This week I will be talking about the `Struct` and `Interface` types.
 
 ## Struct
 
-A `struct` is a data structure that allows you to compose values of _different_ types. Because of that, a `struct` is a great way to aggregate data. From a computer science perspective, a `struct` in Go is considered a [composite data type](https://en.wikipedia.org/wiki/Composite_data_type). 
+A `struct` is a data structure that allows you to compose values of _different_ types. Because of that, a `struct` is a great way to aggregate data. From a computer science perspective, a `struct` in Go is considered a [composite data type](https://en.wikipedia.org/wiki/Composite_data_type).
 
-This simply means that this is a data type which can be constructed using the language's primitive data types (`string`, `int`, etc), or other _composite_ types. Let's see one in action. 
-
+This simply means that this is a data type which can be constructed using the language's primitive data types (`string`, `int`, etc), or other _composite_ types. Let's see one in action.
 
 In this example I will be creating a `struct` with _primitive_ data types:
 
@@ -38,13 +38,12 @@ func main() {
 }
 ```
 
-In the example above, I am creating a new `struct` of type `car`. 
+In the example above, I am creating a new `struct` of type `car`.
 
 - first, I declare that I am creating a new `type`
 - then I declare an identifier for this `type`, in this case, our `type` is `car`
 - we declare our new type, `car`, to have the _underlying_ type of `struct`
 - next, we list out the `field names` paired with their `type`
-
 
 ## Anonymous struct
 
@@ -212,17 +211,16 @@ func main() {
 - in the `main` function I declare two variables, `t` and `s`
 - using a composite literal, `t` is assigned to the value of type `tacoma` with the field name `model` and respective value `tacoma`
 - the same process is done on the next line, the only differences being the variable is named `s` and the type is `subaru`
-- you might have noticed that both the `tacoma` and `subaru` types have a method named `start` 
+- you might have noticed that both the `tacoma` and `subaru` types have a method named `start`
 - since `start` is a part of the `car` `interface`, both the `tacoma` and `subaru` types can _also_ be of type `car`
 - last, we invoke the `getModel` function twice, first by passing in `t` as an argument, and then by passing `s` as an argument
 - the value of the field name `model` is returned for `t` and `s`
 
-
 ## In Summary
 
-There are so many ways to optimize and organize your code in Go. 
+There are so many ways to optimize and organize your code in Go.
 
-The `struct` data type helps us compartmentalize our code by common values and allows us to aggregate values of multiple types, all under one type. How cool is that? 
+The `struct` data type helps us compartmentalize our code by common values and allows us to aggregate values of multiple types, all under one type. How cool is that?
 
 While `struct` allows us to group data creatively, `interface` allows us to group functionality between our `struct` values. Thus allowing our code to have a deeper reach throughout our codebase. Now, creating methods that can run functionality across multiple `struct` types is a painless exercise.
 

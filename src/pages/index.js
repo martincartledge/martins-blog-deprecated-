@@ -1,7 +1,5 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import SignUpForm from "../components/signupForm"
@@ -12,9 +10,8 @@ const BlogIndex = ({ data, location }) => {
   const posts = data.allMarkdownRemark.edges
 
   return (
-    <Layout location={location} title={siteTitle}>
-      <SEO title="Blog" />
-      <Bio />
+    <Layout location={location} title={siteTitle} style={{ background: `red` }}>
+      <SEO title="Martin Cartledge's Blog" />
       <div
         style={{
           width: `100%`,
@@ -46,6 +43,9 @@ const BlogIndex = ({ data, location }) => {
                   </Link>
                 </h3>
                 <small>{node.frontmatter.date}</small>
+                <div>
+                  <p>{node.frontmatter.description}</p>
+                </div>
               </header>
             </article>
           )
@@ -75,7 +75,7 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
-            # description
+            description
           }
         }
       }

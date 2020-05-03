@@ -13,10 +13,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO
-        title={post.frontmatter.title}
-        // description={post.excerpt}
-      />
+      <SEO title={post.frontmatter.title} description={post.excerpt} />
       <article>
         <header>
           <h1
@@ -43,9 +40,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             marginBottom: rhythm(1),
           }}
         />
-        <footer>
-          <Bio />
-        </footer>
+        <footer></footer>
       </article>
 
       <nav>
@@ -102,7 +97,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
-        # description
+        description
       }
     }
   }
