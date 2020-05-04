@@ -46,7 +46,7 @@ When using the `for` keyword, you are creating what is called a _for statement_.
 
 In a single condition statement the condition after the _for_ keyword is evaluated before an execution is ran. In order for the code to be executed, the condition must be evaluated as `true`.
 
-```
+```go
 for 1 < 2 {
     // run code
 }
@@ -56,7 +56,7 @@ for 1 < 2 {
 
 This is what most would find as the _traditional_ for loop they use. In this use of the _for_ keyword, we use the _three pillars_ of a loop: init statement, condition statement, and a post statement.
 
-```
+```go
 package main
 import (
     "fmt"
@@ -76,7 +76,7 @@ func main() {
 
 A range clause is used to iterate though all entries of a slice, array, string, map, or values received from a channel (we will dive into channels in a later entry). I will demonstrate using a `slice` type - we will dive deeper into this type later.
 
-```
+```go
 package main
 import (
     "fmt"
@@ -111,7 +111,7 @@ I like to think of _break statements_ like an escape hatch for your code. If the
 
 A quick example:
 
-```
+```go
 package main
 import (
    "fmt"
@@ -143,7 +143,7 @@ Let me walk you through what is happening here:
 
 I mentioned earlier that go does not have a _while_ loop  -  I have found that using the `continue` statement inside of a `for` loop can render the same results
 
-```
+```go
 package main
 import (
     "fmt"
@@ -192,7 +192,7 @@ A few examples of _conditional statements_ are:
 
 #### if/else
 
-```
+```go
 package main
 import (
     "fmt"
@@ -213,7 +213,7 @@ A fairly straight forward example. Inside of the `main` function we declare a va
 
 #### else if
 
-```
+```go
 package main
 import (
     "fmt"
@@ -242,7 +242,7 @@ _*All*_ `if` statements need to start with an if branch and must have an `else` 
 - if no expression is found for a case, it's value is `true`
 - each _case_ is compared to the value of the switch expression
 
-```
+```go
 package main
 import (
     "fmt"
@@ -267,7 +267,7 @@ You can also create switch statements using a _literal value_ or using a _variab
 
 Here we use a literal value:
 
-```
+```go
 package main
 import (
     "fmt"
@@ -286,7 +286,7 @@ func main() {
 
 Here we use a variable with a single case:
 
-```
+```go
 package main
 import (
     "fmt"
@@ -306,7 +306,7 @@ func main() {
 
 Here we use a variable with multiple cases:
 
-```
+```go
 package main
 import (
     "fmt"

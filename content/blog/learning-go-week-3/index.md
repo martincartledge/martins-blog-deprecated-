@@ -33,7 +33,7 @@ These are some more commonly used types, we will cover these in a later post:
 
 To create a new type, you simply use the _type_ keyword:
 
-```
+```go
 type (
     LightsaberColor string
 )
@@ -48,7 +48,7 @@ An _alias declaration_ also binds an identifier to the given type, and are not m
 
 You can create an _alias declaration_ like this:
 
-```
+```go
 type (
     LightsaberColor = JediLightsaberColor
 )
@@ -60,7 +60,7 @@ Notice that these types now denote the same type. `JediLightsaberColor` can now 
 
 Every type has what is called an _underlying type_. This is essentially the underbelly or the source of types that is bound to the declared type. Let me give you an example:
 
-```
+```go
 type (
     BountyHunter string
 )
@@ -74,7 +74,7 @@ When discussing types, two can only be _identical_ or _different_. Let me give y
 
 _Identical_
 
-```
+```go
 package main
 
 import (
@@ -101,7 +101,7 @@ func main() {
 
 _Different_
 
-```
+```go
 package main
 
 import (
@@ -140,7 +140,7 @@ func main() {
 
 Let me break down this definition by showing you how to create a _type definition_
 
-```
+```go
 type (
     HasTheForce bool
 )
@@ -169,7 +169,7 @@ _Integers_
 
 - whole numbers, no decimals
 
-```
+```go
 package main
 
 import (
@@ -187,7 +187,7 @@ _Floating Point_
 
 - "real" numbers, contains decimals
 
-```
+```go
 package main
 
 import (
@@ -213,7 +213,7 @@ Things to note:
 
 Note: the predeclared `string` type is `string`
 
-```
+```go
 func main() {
     x := "do or do not, there is no try"
     fmt.Printf("%T", x)
@@ -223,7 +223,7 @@ func main() {
 
 You can get the length of a string by using the built-in function `len`:
 
-```
+```go
 func main() {
     x := "do or do not, there is no try"
     fmt.Println(len(x))
@@ -243,7 +243,7 @@ Things to note:
 
 Here is an example of an array:
 
-```
+```go
 func main() {
     var a [10]int
     fmt.Printf("%T", a)
@@ -255,7 +255,7 @@ Note: we use the `var` keyword here because we are declaring an array of type `i
 
 You can get the length of an array by using the built-in function `len` (just like with strings):
 
-```
+```go
 func main() {
     var a [10]int
     fmt.Println(len(a))
@@ -277,7 +277,7 @@ A common practice in declaring a slice is by using a `composite literal`.
 
 A composite literal is composed of a few things, the type and the value.
 
-```
+```go
 package main
 
 import (
@@ -309,7 +309,7 @@ Because `slice` is built on top of an array, when the length of that slice chang
 
 As you can assume, this can potentially take a lot of processing power. To avoid this, we can use the `make` function.
 
-```
+```go
 package main
 
 func main() {
@@ -327,7 +327,7 @@ A few things to note:
 
 Let's see it in action.
 
-```
+```go
 package main
 
 import (
@@ -343,7 +343,7 @@ func main() {
 
 As you can see the slice length and capacity is five and will print five `0` values. What happens if we try to go over the slice capacity?
 
-```
+```go
 package main
 
 import (

@@ -14,7 +14,7 @@ This simply means that this is a data type which can be constructed using the la
 
 In this example I will be creating a `struct` with _primitive_ data types:
 
-```
+```go
 package main
 
 import (
@@ -49,7 +49,7 @@ In the example above, I am creating a new `struct` of type `car`.
 
 Like many things in programming, there is more than one way to do something. The same can be said about creating a `struct`. If you are wanting to use a `struct` for a specific scope, there is a short-hand way to declare them.
 
-```
+```go
 package main
 
 import "fmt"
@@ -86,7 +86,7 @@ Methods are used heavily in programming and that is no different in Go. Thinking
 
 In Go, a _type_ may have a method associated with it, most commonly with a `struct`. Let's take a look at an example using a `method` of a `struct` type:
 
-```
+```go
 package main
 
 import (
@@ -120,7 +120,7 @@ func main() {
 - in this example the `t` is a _value receiver_ - it is possible to use a _pointer receiver_ as well
 - using dot notation we can pull values from `t` - I will show you how in the next example below
 
-```
+```go
 package main
 
 import (
@@ -162,7 +162,7 @@ This example is identical to the previous; however, the change to note here is w
 
 An `interface` is both a `type` and how you name a group of _methods_ in Go. Let's jump right into an example to explain:
 
-```
+```go
 package main
 
 import (

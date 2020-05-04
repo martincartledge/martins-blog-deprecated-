@@ -10,7 +10,7 @@ This is the fourth entry of my weekly series _Learning Go_. Last week I covered 
 
 Pulling out values from one Slice into another is made easy in Go; this is called _slicing_. This is done by specifying a half-open range with two indices, separated by a colon `[:]`. I will demonstrate below:
 
-```
+```go
 package main
 
 import (
@@ -35,7 +35,7 @@ A few things to note about _slicing_:
 
 Let me give you another example
 
-```
+```go
 package main
 
 import (
@@ -59,7 +59,7 @@ The result is taking all values in the Slice _until_ the fourth indices.
 
 Adding more values into a Slice in Go is made easy by using the built-in _variadic_ function, `append`. Quick note: a _variadic_ function is a function that can take zero, or any number of trailing arguments. Let's see an example of a _variadic_ function first:
 
-```
+```go
 package main
 
 import (
@@ -90,7 +90,7 @@ func main() {
 
 As mentioned above, using the `append` function is a quick and easy way to add values to a Slice in Go. The `append` function takes the original Slice as the first argument, and the values as the second argument. The second argument can of course be an arbitrary amount since it is a _variadic_ function. The `append` function returns a Slice of the same type.
 
-```
+```go
 package main
 
 import (
@@ -114,7 +114,7 @@ func main() {
 
 Let's see what happens if you try to use two different types when calling an `append` function.
 
-```
+```go
 package main
 
 import (
@@ -139,7 +139,7 @@ Go makes it easy for you to write code that will not produce inconsistent types.
 
 Go makes removing values from a Slice very intuitive. We will also be using _slicing_ when we want to remove items from a Slice.
 
-```
+```go
 package main
 
 import (
@@ -180,7 +180,7 @@ A few things to note about Map:
 
 Let's see a few common uses of Map in action:
 
-```
+```go
 package main
 
 import (
@@ -203,7 +203,7 @@ func main() {
 
 A cool thing about Map is if you try to access a value by `key` and it _does not_ exist, it will still return a `zero value`. This can be _very_ useful in preventing an `error` being thrown for Map lookups. Speaking of, looking up a value in a Map via the `key` is super straight forward:
 
-```
+```go
 package main
 
 import (
@@ -227,7 +227,7 @@ Above, we grab the value of `yoda` simply by using bracket notation and passing 
 
 What if a specified key is not found? I will show you a quick and simple way to handle this case, called the _Comma Ok Idiom_.
 
-```
+```go
 package main
 
 import (
@@ -256,7 +256,7 @@ The _Comma Ok Idiom_ allows you to write defensive code in just a few lines.
 
 Go makes adding elements to a Map easy peasy. Let me show you how it is done:
 
-```
+```go
 package main
 
 import (
@@ -286,7 +286,7 @@ As seen above, we add the `key` `"darth vader"` and the `value` `24` to our Map 
 
 Looping in Maps is very common, just as they are in Arrays or Slices. In Maps, they are just as easy as well.
 
-```
+```go
 package main
 
 import (
@@ -315,7 +315,7 @@ As you can see, when looping over a Map, the syntax to do so is very similar to 
 
 Sometimes something just has to go. Luckily this action is accomplished painlessly.
 
-```
+```go
 package main
 
 import (
@@ -339,7 +339,7 @@ func main() {
 
 It isn't a bad idea to use the _Comma Ok Idiom_ when wanting to remove items from a Map conditionally as well:
 
-```
+```go
 package main
 
 import (

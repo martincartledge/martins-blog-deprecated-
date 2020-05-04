@@ -70,7 +70,7 @@ A Go application is comprised of packages. I am used to thinking of applications
 
 One of the first pieces of Go I was exposed to was the traditional "Hello world" program. I know at times it is easy to deem these examples "overly trivial" but, I find them helpful. You have to walk before you run, right?
 
-```
+```go
 package main
 
 import (
@@ -98,7 +98,7 @@ Go has some really cool built in behavior with variables. The one I enjoy the mo
 
 Another cool feature of variables is the ability to "throw away" return values. This can be done like this:
 
-```
+```go
 package main
 
 import (
@@ -145,7 +145,7 @@ I have not dove too deep into types in Go yet, but I do know of these types:
 
 A cool thing I learned about using the `var` keyword is that when you declare a variable without an initial value, the Go compiler automatically assigns what is called a `zero value`. Below are the zero values of common data types:
 
-```
+```go
 var y string
 // ""
 var z int
@@ -161,7 +161,7 @@ var z bool
 
 Besides using Interfaces in Typescript, I did not have much experience in creating my own types. I found that Go makes this really easy.
 
-```
+```go
 package main
 
 import (
@@ -194,7 +194,7 @@ As you can see above, I declare a variable with the name `a` of the type `int`. 
 
 It would only make sense that due to Go's strong, statically typed ethos that converting values would be a completely deliberate action. In JavaScript this is referred to as _type casting_, and is not completely reliable. Go takes a different approach - you _convert_ a value's type, you do not _cast a type_. I will demonstrate below.
 
-```
+```go
 package main
 
 import (
