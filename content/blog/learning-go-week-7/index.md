@@ -1,7 +1,7 @@
 ---
 title: Learning Go Week 7
 date: "2020-05-11T22:40:32.169Z"
-description: "Function Expressions, Closure, and Recursive Functions"
+description: "Function Literals and Closure"
 ---
 
 This is the seventh entry of my weekly series _Learning Go_. Last week I discussed _Function Declarations, Arguments, Parameters, and Anonymous Functions_. This week I will be talking about _Function Literals and Closure_.
