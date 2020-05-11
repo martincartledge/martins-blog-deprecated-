@@ -182,4 +182,4 @@ func main() {
 
 ## In Summary
 
-I hope you have enjoyed learning about _Function Declarations, Arguments, Parameters, and Anonymous Functions_. There is so much more to learn about functions in Go, and I am excited to share more with you in the coming weeks. Next week we will dive into _Function Expressions, Callbacks, and Recursive Functions_. Can't wait, see you then!
+I hope you have enjoyed learning about _Function Declarations, Arguments, Parameters, and Anonymous Functions_. There is so much more to learn about functions in Go, and I am excited to share more with you in the coming weeks. Next week we will dive into _Function Expressions and Closure_. Can't wait, see you then!
