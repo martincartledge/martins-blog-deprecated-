@@ -41,7 +41,7 @@ const Layout = ({ children }) => {
       <h5 style={{ width: `5.5rem`, padding: `.5rem` }}>
         <a
           alt="martin-cartledge-email"
-          href="mailto:sayheytomartin@gmail.com"
+          href="mailto:martin@hey.com"
           target="_blank"
           style={{
             boxShadow: `none`,

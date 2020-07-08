@@ -70,7 +70,7 @@ const Bio = () => {
       >
         <a
           alt="martin-cartledge-email"
-          href="mailto:sayheytomartin@gmail.com"
+          href="mailto:martin@hey.com"
           target="_blank"
           style={{
             boxShadow: `none`,
