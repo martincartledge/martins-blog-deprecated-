@@ -45,8 +45,8 @@ func main() {
 - The `factorial` function has a single argument, `4` of type `int`
 - On the next line of execution, using the `fmt` package, we print out the value of `n`
 
-> Quick note: in every Recursive function, there needs to be a "base case"
-> the base case is most commonly an if statement that when evaluated to "true"
+> Quick note: in every Recursive function, there needs to be a "base case".
+> The base case is most commonly an if statement that when evaluated to "true"
 > will stop calling the function within the function (stop recursion)
 > and will allow the program to return out of the function
 
