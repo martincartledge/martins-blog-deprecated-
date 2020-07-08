@@ -158,6 +158,6 @@ func main() {
 
 ## In Summary
 
-I hope you have enjoyed learning about _Recursion_. Although, this example is not overly complex, I hope that you can walk away after reading this post with a better understanding of the principles of _Recursion_ and apply them in your workflow. I will say, there should be a level of caution when writing recursive functions. If your _base case_ is not sound, you could find yourself in a position where your function can continually call itself and inevitably cause a stack overflow. However, when done right, _Recursion_ allows us to write clean, DRY, and efficient code.
+I hope you have enjoyed learning about _Recursion_. Although, this example is not overly complex, I hope that you can walk away after reading this post with a better understanding of the principles of _Recursion_ and apply them in your workflow. I will say, there should be a level of caution when writing recursive functions. If your _base case_ is not sound, you could find yourself in a position where your function can continually call itself and inevitably cause a [stack overflow](https://en.wikipedia.org/wiki/Stack_overflow). However, when done right, _Recursion_ allows us to write clean, DRY, and efficient code.
 
 Next week I will be discussing _Pointers, JSON Marshalling, and JSON Unmarshalling_. See you then!
