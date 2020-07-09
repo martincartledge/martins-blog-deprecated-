@@ -2,7 +2,7 @@
 title: How to write a Recursive Function in Go
 date: "2020-07-08T22:40:32.169Z"
 description: "Learning Go - Week 8 - Recursion"
-thumbnail: './duck.jpeg'
+thumbnail: './duck.jpg'
 ---
 
 I don't know about you, but when I started programming the term _Recursion_ made me quiver a bit. I think this is a natural response honestly. New things can be scary! I also did not understand the importance or the potential impact that using Recursion in your code could have. If you don't have a solid grasp on Recursion, you are in luck! I am going to discuss how you can harness the power of Recursion and use it in your Go programs.

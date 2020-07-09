@@ -2,7 +2,7 @@
 title: What is a Type in Go?
 date: "2020-04-12T22:40:32.169Z"
 description: "Learning Go - Week 3 - Boolean, Numeric, String, Array, and Slice"
-thumbnail: './fruit.jpeg'
+thumbnail: './fruit.jpg'
 ---
 
 This is the third entry of my weekly series _Learning Go_. Last week I covered _control flow_ and a few of the primary _control structures_. I also touched on familiar territory; loops, the for statement, and conditional statements. This week I am diving head-first into _types_ in Go, and what they are most commonly used with.
