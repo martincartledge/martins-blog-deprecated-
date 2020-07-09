@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Martin Cartledge`,
+    image: "content/assets/profile-pic.jpg",
     author: {
       name: `Martin Cartledge`,
       summary: `who lives and works in San Francisco building useful things.`,
