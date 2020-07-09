@@ -1,7 +1,7 @@
 ---
 title: Function Literals and Closure in Go
 date: "2020-05-11T22:40:32.169Z"
-description: "Learning Go - Week 7 - Function Literals and Closure"
+description: "Learning Go - Week 7"
 featured: ./mountain.jpg
 ---
 

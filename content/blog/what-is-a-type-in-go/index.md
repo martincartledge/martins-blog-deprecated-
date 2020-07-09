@@ -1,7 +1,7 @@
 ---
 title: What is a Type in Go?
 date: "2020-04-12T22:40:32.169Z"
-description: "Learning Go - Week 3 - Boolean, Numeric, String, Array, and Slice"
+description: "Learning Go - Week 3"
 featured: ./fruit.jpg
 ---
 

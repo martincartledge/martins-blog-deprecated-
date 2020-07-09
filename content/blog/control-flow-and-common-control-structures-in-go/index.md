@@ -1,7 +1,7 @@
 ---
 title: Control flow and Common Control Structures in Go
 date: "2020-04-04T22:40:32.169Z"
-description: "Learning Go - Week 2 - Control flow and Common Control Structures"
+description: "Learning Go - Week 2"
 featured: ./waterfall.jpg
 ---
 

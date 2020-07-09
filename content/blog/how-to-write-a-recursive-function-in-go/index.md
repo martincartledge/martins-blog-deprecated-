@@ -1,7 +1,7 @@
 ---
 title: How to write a Recursive Function in Go
 date: "2020-07-08T22:40:32.169Z"
-description: "Learning Go - Week 8 - Recursion"
+description: "Learning Go - Week 8"
 featured: ./duck.jpg
 ---
 

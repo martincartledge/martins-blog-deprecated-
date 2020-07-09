@@ -1112,6 +1112,11 @@
   dependencies:
     core-js "^2.5.7"
 
+"@jlengstorf/get-share-image@^0.7.1":
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/@jlengstorf/get-share-image/-/get-share-image-0.7.1.tgz#bdef9c633ce6dbf8c300fc82d18befba615a0d5c"
+  integrity sha512-eXATsFDhdRYMqAcrBNW4SpZttAxlA9S/9IAvyUt7UTxxlwNXKo/tqrOxRoOSrA79l25QQ0oDqP/9BcdvvGmYxQ==
+
 "@mikaelkristiansson/domready@^1.0.10":
   version "1.0.10"
   resolved "https://registry.yarnpkg.com/@mikaelkristiansson/domready/-/domready-1.0.10.tgz#f6d69866c0857664e70690d7a0bfedb72143adb5"

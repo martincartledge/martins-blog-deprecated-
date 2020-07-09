@@ -1,7 +1,7 @@
 ---
 title: History of Go, Variables, and Types
 date: "2020-03-29T22:40:32.169Z"
-description: "Learning Go - Week 1 - History of Go, Variables, and Types"
+description: "Learning Go - Week 1"
 featured: ./space.jpg
 ---
 

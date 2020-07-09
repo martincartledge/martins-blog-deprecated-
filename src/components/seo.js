@@ -9,15 +9,17 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import getShareImage from "@jlengstorf/get-share-image"
 
-function SEO({ lang, meta, image, title, pathname }) {
+function SEO({ lang, title, pathname, description }) {
+  console.log("SEO -> title", title)
+  console.log("SEO -> description", description)
   const { site } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
             title
-            image
             siteUrl
             social {
               twitter
@@ -30,14 +32,18 @@ function SEO({ lang, meta, image, title, pathname }) {
 
   const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null
 
-  let origin = ""
-  if (typeof window !== "undefined") {
-    origin = window.location.origin
-  }
+  const socialImage = getShareImage({
+    title: title,
+    tagline: description,
+    cloudName: "martin-cartledge-blog",
+    imagePublicID: "martin-blog-template_oashlq",
+    titleFont: "montserrat",
+    taglineFont: "montserrat",
+    titleExtraConfig: "_bold",
+    textColor: "232129",
+  })
 
-  const imgSrc = image && image.src ? image.src : null
-
-  const img = origin + imgSrc
+  console.log("SEO -> socialImage", socialImage)
 
   return (
     <Helmet
@@ -58,12 +64,12 @@ function SEO({ lang, meta, image, title, pathname }) {
     >
       <title>{title}</title>
       <meta name="description" content={title} />
-      <meta name="image" content={image} />
+      <meta name="image" content={socialImage} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content={site.siteMetadata.author} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={title} />
-      <meta name="twitter:image" content={img} />
+      <meta name="twitter:image" content={socialImage} />
     </Helmet>
   )
 }

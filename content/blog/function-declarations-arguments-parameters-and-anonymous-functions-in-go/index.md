@@ -1,7 +1,7 @@
 ---
 title: Function Declarations, Arguments, Parameters, and Anonymous Functions in Go
 date: "2020-05-03T22:40:32.169Z"
-description: "Learning Go - Week 6 - Function Declarations, Arguments, Parameters, and Anonymous Functions"
+description: "Learning Go - Week 6"
 featured: ./garage.jpg
 ---
 

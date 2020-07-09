@@ -1,7 +1,7 @@
 ---
 title: What is the Slice and Map Type in Go?
 date: "2020-04-19T22:40:32.169Z"
-description: "Learning Go - Week 4 - Slice and Map"
+description: "Learning Go - Week 4"
 featured: ./lights.jpeg
 ---
 

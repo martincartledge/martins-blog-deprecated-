@@ -1,7 +1,7 @@
 ---
 title: What are the Struct and Interface Types in Go?
 date: "2020-04-26T22:40:32.169Z"
-description: "Learning Go - Week 5 - Struct and Interface"
+description: "Learning Go - Week 5"
 featured: ./city.jpg
 ---
 
