@@ -9,13 +9,14 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
-  const image = post.image ? post.image.childImageSharp.resize : null
-
+  const image = post.frontmatter.image
+    ? post.frontmatter.image.childImageSharp.resize
+    : null
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
-        title={post.title}
-        description={post.description || post.excerpt}
+        title={post.frontmatter.title}
+        description={post.frontmatter.description || post.excerpt}
         image={image}
       />
       <article>
