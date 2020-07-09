@@ -2,6 +2,7 @@
 title: Control flow and Common Control Structures in Go
 date: "2020-04-04T22:40:32.169Z"
 description: "Learning Go - Week 2 - Control flow and Common Control Structures"
+thumbnail: './waterfall.jpeg'
 ---
 
 This is the second entry of my weekly series _Learning Go_. Last week I discussed the history of Go, its thought foundations, variables, and types. This week I dove into _fairly_ familiar territory. A lot of concepts came to me quickly due to my background in JavaScript; however, it was really cool to dig into the differences in how these concepts are implemented in another language. Let's get to it.
