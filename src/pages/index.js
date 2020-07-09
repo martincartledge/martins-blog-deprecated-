@@ -77,10 +77,12 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
-            thumbnail {
+            image: featured {
               childImageSharp {
-                sizes(maxWidth: 600) {
-                  ...GatsbyImageSharpSizes
+                resize(width: 1200) {
+                  src
+                  height
+                  width
                 }
               }
             }

@@ -1,7 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
@@ -10,14 +9,14 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
-  const thumbnail = post.frontmatter.thumbnail
+  const image = post.image ? post.image.childImageSharp.resize : null
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
-        title={post.frontmatter.title}
-        description={post.excerpt}
-        thumbnail={thumbnail}
+        title={post.title}
+        description={post.description || post.excerpt}
+        image={image}
       />
       <article>
         <header>
@@ -104,10 +103,12 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
-        thumbnail {
+        image: featured {
           childImageSharp {
-            sizes(maxWidth: 600) {
-              ...GatsbyImageSharpSizes
+            resize(width: 1200) {
+              src
+              height
+              width
             }
           }
         }

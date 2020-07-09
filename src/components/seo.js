@@ -10,13 +10,7 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-const SEO = ({ lang, meta, title, thumbnail }) => {
-  const imageSrc = thumbnail && thumbnail.childImageSharp.sizes.src
-  let origin = ""
-  if (typeof window !== "undefined") {
-    origin = window.location.origin
-  }
-  const image = origin + imageSrc
+function SEO({ lang, meta, image: metaImage, title, pathname }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -33,6 +27,13 @@ const SEO = ({ lang, meta, title, thumbnail }) => {
     `
   )
 
+  const image =
+    metaImage && metaImage.src
+      ? `${site.siteMetadata.siteUrl}${metaImage.src}`
+      : null
+
+  const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null
+
   return (
     <Helmet
       htmlAttributes={{
@@ -40,6 +41,16 @@ const SEO = ({ lang, meta, title, thumbnail }) => {
       }}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
+      link={
+        canonical
+          ? [
+              {
+                rel: "canonical",
+                href: canonical,
+              },
+            ]
+          : []
+      }
       meta={[
         {
           name: `description`,
@@ -58,12 +69,8 @@ const SEO = ({ lang, meta, title, thumbnail }) => {
           content: `website`,
         },
         {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
           name: `twitter:creator`,
-          content: site.siteMetadata.social.twitter,
+          content: site.siteMetadata.author,
         },
         {
           name: `twitter:title`,
@@ -73,11 +80,35 @@ const SEO = ({ lang, meta, title, thumbnail }) => {
           name: `twitter:description`,
           content: title,
         },
-        {
-          name: `twitter:image`,
-          content: image,
-        },
-      ].concat(meta)}
+      ]
+        .concat(
+          metaImage
+            ? [
+                {
+                  property: "og:image",
+                  content: image,
+                },
+                {
+                  property: "og:image:width",
+                  content: metaImage.width,
+                },
+                {
+                  property: "og:image:height",
+                  content: metaImage.height,
+                },
+                {
+                  name: "twitter:card",
+                  content: "summary_large_image",
+                },
+              ]
+            : [
+                {
+                  name: "twitter:card",
+                  content: "summary",
+                },
+              ]
+        )
+        .concat(meta)}
     />
   )
 }
