@@ -18,6 +18,7 @@ function SEO({ lang, meta, image, title, pathname }) {
           siteMetadata {
             title
             image
+            siteUrl
             social {
               twitter
             }
@@ -28,6 +29,13 @@ function SEO({ lang, meta, image, title, pathname }) {
   )
 
   const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null
+
+  let origin = ""
+  if (typeof window !== "undefined") {
+    origin = window.location.origin
+  }
+
+  const img = origin + image.src
 
   return (
     <Helmet
@@ -75,35 +83,11 @@ function SEO({ lang, meta, image, title, pathname }) {
           name: `twitter:description`,
           content: title,
         },
-      ]
-        .concat(
-          image
-            ? [
-                {
-                  property: "og:image",
-                  content: image,
-                },
-                {
-                  property: "og:image:width",
-                  content: image.width,
-                },
-                {
-                  property: "og:image:height",
-                  content: image.height,
-                },
-                {
-                  name: "twitter:card",
-                  content: "summary_large_image",
-                },
-              ]
-            : [
-                {
-                  name: "twitter:card",
-                  content: "summary",
-                },
-              ]
-        )
-        .concat(meta)}
+        {
+          name: `twitter:image`,
+          content: img,
+        },
+      ].concat(meta)}
     />
   )
 }

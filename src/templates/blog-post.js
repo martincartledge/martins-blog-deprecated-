@@ -18,6 +18,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
         image={image}
+        pathname={location.pathname}
       />
       <article>
         <header>

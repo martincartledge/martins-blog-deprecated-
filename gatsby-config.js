@@ -1,13 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: `Martin Cartledge`,
+    title: `Martin Cartledge's Blog`,
     image: "content/assets/profile-pic.jpg",
     author: {
       name: `Martin Cartledge`,
       summary: `who lives and works in San Francisco building useful things.`,
     },
     description: `Martin Cartledge's blog about the things he learns in software development`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `https://martincartledge.io`,
     social: {
       twitter: `spindriftboi`,
     },
