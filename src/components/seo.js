@@ -35,7 +35,9 @@ function SEO({ lang, meta, image, title, pathname }) {
     origin = window.location.origin
   }
 
-  const img = origin + image.src
+  const imgSrc = image && image.src ? image.src : null
+
+  const img = origin + imgSrc
 
   return (
     <Helmet
