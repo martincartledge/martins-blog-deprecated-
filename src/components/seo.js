@@ -44,7 +44,6 @@ function SEO({ lang, meta, image, title, pathname }) {
       htmlAttributes={{
         lang,
       }}
-      title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       link={
         canonical
@@ -56,45 +55,16 @@ function SEO({ lang, meta, image, title, pathname }) {
             ]
           : []
       }
-      meta={[
-        {
-          name: `description`,
-          content: title,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: title,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary_large_image`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: title,
-        },
-        {
-          name: `twitter:image`,
-          content: img,
-        },
-      ].concat(meta)}
-    />
+    >
+      <title>{title}</title>
+      <meta name="description" content={title} />
+      <meta name="image" content={image} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:creator" content={site.siteMetadata.author} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={title} />
+      <meta name="twitter:image" content={img} />
+    </Helmet>
   )
 }
 
