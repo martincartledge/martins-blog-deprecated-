@@ -2,7 +2,6 @@
 title: What are the Struct and Interface Types in Go?
 date: "2020-04-26T22:40:32.169Z"
 description: "Learning Go - Week 5"
-featured: ./city.jpg
 ---
 
 This is the fifth entry of my weekly series _Learning Go_. Last week I covered a few more pieces of the `Slice` and `Map` type. This week I will be talking about the `Struct` and `Interface` types.

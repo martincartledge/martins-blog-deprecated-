@@ -2,7 +2,6 @@
 title: Function Literals and Closure in Go
 date: "2020-05-11T22:40:32.169Z"
 description: "Learning Go - Week 7"
-featured: ./mountain.jpg
 ---
 
 This is the seventh entry of my weekly series _Learning Go_. Last week I discussed _Function Declarations, Arguments, Parameters, and Anonymous Functions_. This week I will be talking about _Function Literals and Closure_.

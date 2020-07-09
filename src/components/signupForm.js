@@ -1,8 +1,8 @@
+import "./index.css"
 import React, { useState } from "react"
 const GATSBY_API_KEY = process.env.GATSBY_API_KEY
 
 const handleSubmit = async (values, setMessage) => {
-  console.log("handleSubmit -> values", values)
   const data = { ...values, referrer_url: "https://martincartledge.io" }
   try {
     const response = await fetch(
@@ -33,17 +33,27 @@ const SignUpForm = () => {
   const [showForm, setShowForm] = useState(false)
   return (
     <>
-      {message && <p>{message}</p>}
+      {message && (
+        <h5 style={{ color: `#cc6b87`, fontFamily: `Montserrat, sans-serif` }}>
+          {message}
+        </h5>
+      )}
       {!showForm && (
         <>
-          <p>
-            Fan of programming, golden retrievers, or ping pong?{" "}
-            <span>
-              <a style={{ color: `#cc6b87` }} onClick={() => setShowForm(true)}>
-                Click here to subscribe to my newsletter.
-              </a>
-            </span>
-          </p>
+          <h5 className="subscribe" style={{ marginTop: `0` }}>
+            <a
+              style={{
+                color: `#cc6b87`,
+                fontFamily: `Montserrat, sans-serif`,
+                boxShadow: `none`,
+                textDecoration: `underline`,
+                color: `#cc6b87`,
+              }}
+              onClick={() => setShowForm(true)}
+            >
+              Click here to subscribe to my newsletter.
+            </a>
+          </h5>
         </>
       )}
       {showForm && (
@@ -67,7 +77,7 @@ const SignUpForm = () => {
           </div>
           <label
             htmlFor="email"
-            style={{ fontFamily: `Montserrat, sans-serif` }}
+            style={{ fontFamily: `Montserrat, sans-serif`, fontWeight: 900 }}
           >
             Email:
           </label>
@@ -75,26 +85,19 @@ const SignUpForm = () => {
             <input
               type="email"
               name="email"
-              placeholder="shrutefarms@gmail.com"
+              className="inp"
+              placeholder="shrutefarms@gmail.com   🏒"
               id="email"
               value={email}
               onChange={e => setEmail(e.target.value)}
               required
               autoFocus
-              style={{
-                background: `#ffffff`,
-                color: `#000000e6`,
-                border: `0`,
-                height: `2rem`,
-                border: `0`,
-                width: `80%`,
-                maxWidth: `15rem`,
-              }}
             />
             <button
               type="submit"
               style={{
                 background: `#cc6b87`,
+                fontFamily: `Montserrat, sans-serif`,
                 color: `#ffffff`,
                 border: `0`,
                 height: `2rem`,

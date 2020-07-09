@@ -21,6 +21,7 @@ const BlogIndex = ({ data, location }) => {
           marginBottom: `5rem`,
         }}
       >
+        <SignUpForm />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
@@ -51,7 +52,6 @@ const BlogIndex = ({ data, location }) => {
           )
         })}
       </div>
-      <SignUpForm />
     </Layout>
   )
 }
@@ -76,15 +76,6 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
-            image: featured {
-              childImageSharp {
-                resize(width: 1200) {
-                  src
-                  height
-                  width
-                }
-              }
-            }
           }
         }
       }

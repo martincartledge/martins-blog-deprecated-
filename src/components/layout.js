@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import { rhythm } from "../utils/typography"
 
@@ -19,37 +18,14 @@ const Layout = ({ children }) => {
           padding: `.5rem .5rem .5rem 0`,
         }}
       >
-        martin cartledge
-      </h5>
-      <h5
-        style={{
-          fontFamily: `Montserrat, sans-serif`,
-          width: `5.5rem`,
-          padding: `.5rem`,
-        }}
-      >
         <a
           style={{
             boxShadow: `none`,
-            color: `#cc6b87`,
+            color: `#000000e6`,
           }}
           href="/"
         >
-          home
-        </a>
-      </h5>
-      <h5 style={{ width: `5.5rem`, padding: `.5rem` }}>
-        <a
-          alt="martin-cartledge-email"
-          href="mailto:martin@hey.com"
-          target="_blank"
-          style={{
-            boxShadow: `none`,
-            color: `#cc6b87`,
-            fontFamily: `Montserrat, sans-serif`,
-          }}
-        >
-          email
+          martin cartledge
         </a>
       </h5>
       <h5 style={{ width: `5.5rem`, padding: `.5rem` }}>
@@ -68,8 +44,8 @@ const Layout = ({ children }) => {
       </h5>
       <h5 style={{ width: `5.5rem`, padding: `.5rem` }}>
         <a
-          alt="martin-cartledge-medium"
-          href="https://medium.com/@spindriftboi"
+          alt="martin-cartledge-github"
+          href="https://github.com/martincartledge"
           target="_blank"
           style={{
             boxShadow: `none`,
@@ -77,21 +53,7 @@ const Layout = ({ children }) => {
             fontFamily: `Montserrat, sans-serif`,
           }}
         >
-          medium
-        </a>
-      </h5>
-      <h5 style={{ width: `5.5rem`, padding: `.5rem` }}>
-        <a
-          alt="martin-cartledge-linkedin"
-          href="https://www.linkedin.com/in/martincartledge/"
-          target="_blank"
-          style={{
-            boxShadow: `none`,
-            color: `#cc6b87`,
-            fontFamily: `Montserrat, sans-serif`,
-          }}
-        >
-          linkedin
+          github
         </a>
       </h5>
     </ul>
