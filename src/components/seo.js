@@ -46,29 +46,24 @@ function SEO({ lang, title, pathname, description }) {
   console.log("SEO -> socialImage", socialImage)
 
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      link={
-        canonical
-          ? [
-              {
-                rel: "canonical",
-                href: canonical,
-              },
-            ]
-          : []
-      }
-    >
+    <Helmet>
+      {/* General tags */}
       <title>{title}</title>
-      <meta name="description" content={title} />
+      <meta name="description" content={description} />
       <meta name="image" content={socialImage} />
+
+      {/* OpenGraph tags */}
+      <meta property="og:url" content={canonical} />
+      <meta property="og:type" content="article" />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={socialImage} />
+
+      {/* Twitter Card tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content={site.siteMetadata.author} />
       <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={title} />
+      <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={socialImage} />
     </Helmet>
   )
