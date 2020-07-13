@@ -51,10 +51,13 @@ func sayHello() {
 }
 ```
 
-- below the `func` `main` we _declare_ a new function using the `func` keyword
-- next, we give this function the _identifier_ `sayHello`
-- in between the parentheses `()` is where your parameters go. We do not have any in this example; however, you still need to have them
-- we _execute_ this function inside of `main` simply by writing the function identifier with a set of parentheses `()`
+below the `func` `main` we _declare_ a new function using the `func` keyword
+
+next, we give this function the _identifier_ `sayHello`
+
+in between the parentheses `()` is where your parameters go. We do not have any in this example; however, you still need to have them
+
+we _execute_ this function inside of `main` simply by writing the function identifier with a set of parentheses `()`
 
 ## Arguments and Parameters
 
@@ -79,12 +82,17 @@ func myName(s string) {
 }
 ```
 
-- much like the first example, we create a new function using the `func` keyword with the identifier `myName`
-- immediately following our function identifier `myName`, you will see we put `s string` between parentheses
-- the `s` is the _value_ we will receive from this function and `string` tells us that `s` will be of _type_ `string`
-- inside of `main`we write our function identifier, `myName`
-- immediately following we put the _value_ `"martin"` of _type_ `string` inside of the parentheses, this is the function's _argument_
-- `myName` is then _executed_ and it prints `"hello martin"`
+much like the first example, we create a new function using the `func` keyword with the identifier `myName`
+
+immediately following our function identifier `myName`, you will see we put `s string` between parentheses
+
+the `s` is the _value_ we will receive from this function and `string` tells us that `s` will be of _type_ `string`
+
+inside of `main`we write our function identifier, `myName`
+
+immediately following we put the _value_ `"martin"` of _type_ `string` inside of the parentheses, this is the function's _argument_
+
+`myName` is then _executed_ and it prints `"hello martin"`
 
 ## Return Values
 
@@ -110,13 +118,19 @@ func sayHello(s string) string {
 
 From a code organization standpoint, there will come a time that you need to assign a _variable_ to the _returned value_ of a function in order to do something else useful with it.
 
-- below `func` `main`, we declare a function using the `func` keyword
-- give an _identifier_ of `sayHello`
-- write a single _parameter_ `s` of _type_ `string` between parentheses
-- then write a _return type_ of `string`
-- using the `return` keyword, we `return` the value of `s` from this _function_
-- inside of `func` `main` we declare a new variable `n` that is equal to the _returned value_ of the `sayHello` function
-- after the function executes, we print the value of `n`
+below `func` `main`, we declare a function using the `func` keyword
+
+give an _identifier_ of `sayHello`
+
+write a single _parameter_ `s` of _type_ `string` between parentheses
+
+then write a _return type_ of `string`
+
+using the `return` keyword, we `return` the value of `s` from this _function_
+
+inside of `func` `main` we declare a new variable `n` that is equal to the _returned value_ of the `sayHello` function
+
+after the function executes, we print the value of `n`
 
 ## Multiple Return Values
 
@@ -142,16 +156,25 @@ func isAJedi(s1, s2 string) (string, bool) {
 }
 ```
 
-- we declare a new function using the `func` keyword
-- give an _identifier_ of `isAJedi`
-- between the first set of parentheses, we write two parameters: `s1` and `s2`, both of type `string`
-- in the next set of parentheses we have our _return types_: `string` and `bool`
-- on the first line, we declare a variable `a` and assign it to the _value_ of a `string` that includes the values of `s1` and `s2`
-- next, we declare a variable `b` and assign it to the value `true` of _type_ `bool`
-- after the `return` keyword we write the variables `a` and `b`
-  - our return types are `string` and `bool`, order matters; therefore, we can not return a `bool` value and then a `string` value
-- inside of `func` `main` we declare `x` and `y` as variables that will be assigned the _value_ of each _returned value_ from `isAJedi`
-- when we print we see that the _value_ of `x` is `obi wan kenobi` and the _value_ of `y` is `true`
+we declare a new function using the `func` keyword
+
+give an _identifier_ of `isAJedi`
+
+between the first set of parentheses, we write two parameters: `s1` and `s2`, both of type `string`
+
+in the next set of parentheses we have our _return types_: `string` and `bool`
+
+on the first line, we declare a variable `a` and assign it to the _value_ of a `string` that includes the values of `s1` and `s2`
+
+next, we declare a variable `b` and assign it to the value `true` of _type_ `bool`
+
+after the `return` keyword we write the variables `a` and `b`
+
+our return types are `string` and `bool`, order matters; therefore, we can not return a `bool` value and then a `string` value
+
+inside of `func` `main` we declare `x` and `y` as variables that will be assigned the _value_ of each _returned value_ from `isAJedi`
+
+when we print we see that the _value_ of `x` is `obi wan kenobi` and the _value_ of `y` is `true`
 
 ## Anonymous Functions
 
@@ -172,13 +195,19 @@ func main() {
 }
 ```
 
-- inside `func` `main` we use the `func` keyword with
-- since we do not have any _parameters_, we write empty parentheses `()`
-- to let the compiler know to look inside this function, the _function body_ we write an open bracket `{`
-- inside the _function body_, using the `fmt` package, we print the `string` `I'm anonymous!`
-- to signify our _function body_ is closed we write a closing bracket `}` on the next line
-- following the closing bracket `}` you will notice we have a set of empty parentheses `()`, as mentioned previously, this is how we tell the compiler to _execute_ this function
-- since we have no _arguments_ these parentheses are empty `()`
+inside `func` `main` we use the `func` keyword with
+
+since we do not have any _parameters_, we write empty parentheses `()`
+
+to let the compiler know to look inside this function, the _function body_ we write an open bracket `{`
+
+inside the _function body_, using the `fmt` package, we print the `string` `I'm anonymous!`
+
+to signify our _function body_ is closed we write a closing bracket `}` on the next line
+
+following the closing bracket `}` you will notice we have a set of empty parentheses `()`, as mentioned previously, this is how we tell the compiler to _execute_ this function
+
+since we have no _arguments_ these parentheses are empty `()`
 
 ## In Summary
 

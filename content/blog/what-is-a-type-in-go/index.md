@@ -41,8 +41,9 @@ type (
 
 A new type, `LightsaberColor` has now been created in your program. A few things to note that is happening in this declaration:
 
-- this declaration _binds_ an identifier (`LightsaberColor`) to a type name, `string`.
-- there are two forms of type declarations, _alias declarations_ and _type definitions_ (the example above is a _type definition_)
+this declaration _binds_ an identifier (`LightsaberColor`) to a type name, `string`.
+
+there are two forms of type declarations, _alias declarations_ and _type definitions_ (the example above is a _type definition_)
 
 An _alias declaration_ also binds an identifier to the given type, and are not meant for everyday use. Their purpose was to support large refactors involving moving a _type_ between multiple and/or large packages.
 
@@ -97,7 +98,7 @@ func main() {
 }
 ```
 
-- `Jedi` is of the type `bool`, `Yoda` is also of type `bool`. This is also an example of an _alias declaration_.
+`Jedi` is of the type `bool`, `Yoda` is also of type `bool`. This is also an example of an _alias declaration_.
 
 _Different_
 
@@ -132,7 +133,7 @@ func main() {
 
 ```
 
-- although `Yoda` and `Emperor` have the same _underlying types_, they were created in separate type definitions
+although `Yoda` and `Emperor` have the same _underlying types_, they were created in separate type definitions
 
 ## Type definitions
 
@@ -165,9 +166,7 @@ Note: the predeclared `boolean` type is `bool`
 
 These types get pretty extensive, for now, I will show the differences between integers and floating-point.
 
-_Integers_
-
-- whole numbers, no decimals
+_Integers_ - whole numbers, no decimals
 
 ```go
 package main
@@ -183,9 +182,7 @@ func main() {
 }
 ```
 
-_Floating Point_
-
-- "real" numbers, contains decimals
+_Floating Point_ - "real" numbers, contains decimals
 
 ```go
 package main
@@ -295,9 +292,11 @@ func main() {
 
 Let me explain what is happening:
 
-- we declare the variable `cl` using a short variable declaration
-- we bind it's value to the type `slice` that will contain the type `int` (`[]int`)
-- we then assign the values `1 2 3 4` to `cl` by placing them between brackets `{}`
+we declare the variable `cl` using a short variable declaration
+
+we bind it's value to the type `slice` that will contain the type `int` (`[]int`)
+
+we then assign the values `1 2 3 4` to `cl` by placing them between brackets `{}`
 
 Note: when creating a _composite literal_ all values _have_ to be of the same type
 
@@ -321,9 +320,11 @@ func main() {
 
 A few things to note:
 
-- `make`'s first parameter has to be the slice type
-- `make`'s second parameter is the _length_
-- `make`'s third and _optional_ parameter is the _capacity_ of the `slice`
+`make`'s first parameter has to be the slice type
+
+`make`'s second parameter is the _length_
+
+`make`'s third and _optional_ parameter is the _capacity_ of the `slice`
 
 Let's see it in action.
 

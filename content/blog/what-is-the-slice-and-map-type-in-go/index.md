@@ -25,9 +25,24 @@ func main() {
 }
 ```
 
-- first we assign the variable `x` to a Slice of the type _int_ with the values `4 5 6 7 8` using a _composite literal_
-- next, we assign the variable `y` to the value of `x` from the indices `1` up until but _not including_ indices `3`
-- the result gives us a Slice with the values `5` and `6`
+```go
+x := []int{4, 5, 6, 7, 8}
+```
+
+first we assign the variable `x` to a Slice of the type _int_ with the values `4 5 6 7 8` using a _composite literal_
+
+```go
+y := x[1:3]
+```
+
+next, we assign the variable `y` to the value of `x` from the indices `1` up until but _not including_ indices `3`
+
+```go
+fmt.Println(y)
+// [5 6]
+```
+
+the result gives us a Slice with the values `5` and `6`
 
 A few things to note about _slicing_:
 
@@ -50,6 +65,11 @@ func main() {
 ```
 
 Above we are slicing a Slice; however, in this example we omit the first indices.
+
+```go
+fmt.Println(x[:4])
+// [4 5 6 7]
+```
 
 As you can see, when we omit the first indices it will default to `0`, and if we were to omit the second indices it would default to the length of the Slice.
 
@@ -78,13 +98,30 @@ func main() {
 }
 ```
 
-- we create a function called `count`
-- `count` has a single parameter `x`
-- what makes the `count` function _variadic_ is the `...` syntax after the `x` parameter
-- this is how we tell the Go compiler to allow _any number_ of arguments for `x`
-- in the `main` function you will see that we use the `...` syntax when we call the `count` function
-- this is how we are able to pass an arbitrary amount of arguments into `count`
-- by using the `...` syntax we are letting the Go compiler know that there _could_ be 10 items in this slice, or 100 items
+```go
+func count(x ...int) {
+```
+
+we create a function called `count`
+
+`count` has a single parameter `x`
+
+what makes the `count` function _variadic_ is the `...` syntax after the `x` parameter
+
+this is how we tell the Go compiler to allow _any number_ of arguments for `x`
+
+```go
+func main() {
+		n := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+		count(n...)
+}
+```
+
+in the `main` function you will see that we use the `...` syntax when we call the `count` function
+
+this is how we are able to pass an arbitrary amount of arguments into `count`
+
+by using the `...` syntax we are letting the Go compiler know that there _could_ be 10 items in this slice, or 100 items
 
 ## Appending values in a Slice
 
@@ -105,12 +142,25 @@ func main() {
 }
 ```
 
-- inside of the `main` function, we declare the variable `x` and set the value to a Slice of type `int` that contains `1` through `10`
-- on the next line, we re-assign the variable `n` to the return value of the `append` function
-- inside the `append` function we pass `n` as the first argument - note this is a Slice of type `int`
-- the second argument is the values `11` through `15`
-- remember this is a _variadic_ function meaning it can have any number of trailing arguments
-- second argument values _must be of the same type_ that the first argument Slice contains
+```go
+n := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+```
+
+inside of the `main` function, we declare the variable `n` and set the value to a Slice of type `int` that contains `1` through `10`
+
+```go
+n = append(n, 11, 12, 13, 14, 15)
+```
+
+on the next line, we re-assign the variable `n` to the return value of the `append` function
+
+inside the `append` function we pass `n` as the first argument - note this is a Slice of type `int`
+
+the second argument is the values `11` through `15`
+
+remember this is a _variadic_ function meaning it can have any number of trailing arguments
+
+second argument values _must be of the same type_ that the first argument Slice contains
 
 Let's see what happens if you try to use two different types when calling an `append` function.
 
@@ -129,7 +179,7 @@ func main() {
 }
 ```
 
-- because the arguments in `append` were _not_ the type `int` the Go compiler throws an error and displays this message:
+because the arguments in `append` were _not_ the type `int` the Go compiler throws an error and displays this message:
 
 `cannot use "not" (type untyped string) as type int in append`
 
@@ -158,14 +208,33 @@ func main() {
 }
 ```
 
-- inside of the `main` function, we declare the variable `n` and set the value to a Slice of type `int` with the values `1` through `10`
-- next, we `append` the values `11`, `12`, `13`, `14`, and `15` to the Slice `n`
-- let's say that we want to remove the value `4` from `n`
-- we do this by using slicing syntax `[:]`
-- we passing in the values of the Slice `n` up until the third indices `n[:3]`
-- our second argument starts with the value at the fourth indices of `n` `n[4:]`
-- since there is no value on the right-hand side of the `:` we take _all_ of the rest of the values in `n`
-- you'll notice we see the `...` syntax again, this is to ensure we can take an _arbitrary amount_ of arguments in case the size of `n` grows
+```go
+n := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+```
+
+inside of the `main` function, we declare the variable `n` and set the value to a Slice of type `int` with the values `1` through `10`
+
+```go
+n = append(n, 11, 12, 13, 14, 15)
+```
+
+next, we `append` the values `11`, `12`, `13`, `14`, and `15` to the Slice `n`
+
+let's say that we want to remove the value `4` from `n`
+
+we do this by using slicing syntax `[:]`
+
+```go
+n = append(n[:3], n[4:]...)
+```
+
+we pass in the values of the Slice `n` up until the third indices `n[:3]`
+
+our second argument starts with the value at the fourth indices of `n` `n[4:]`
+
+since there is no value on the right-hand side of the `:` we take _all_ of the rest of the values in `n`
+
+you'll notice we see the `...` syntax again, this is to ensure we can take an _arbitrary amount_ of arguments in case the size of `n` grows
 
 ## Map
 
@@ -197,9 +266,11 @@ func main() {
 }
 ```
 
-- inside of the `main` function, we declare the variable `m` that is assigned to a `map`
-- the `map`'s `key` will be of type `string`
-- the `map`'s `value` will be of type `int`
+inside of the `main` function, we declare the variable `m` that is assigned to a `map`
+
+the `map`'s `key` will be of type `string`
+
+the `map`'s `value` will be of type `int`
 
 A cool thing about Map is if you try to access a value by `key` and it _does not_ exist, it will still return a `zero value`. This can be _very_ useful in preventing an `error` being thrown for Map lookups. Speaking of, looking up a value in a Map via the `key` is super straight forward:
 
@@ -249,8 +320,9 @@ func main() {
 
 The _Comma Ok Idiom_ allows you to write defensive code in just a few lines.
 
-- first we write an `if` statement that has two return values, `v` (value) and `ok` (condition is evaluated to `true`)
-- since our Map contains the `key` `"yoda"` we step into this block and print this statement, along with the `value` of the `"yoda"` `key`
+first we write an `if` statement that has two return values, `v` (value) and `ok` (condition is evaluated to `true`)
+
+since our Map contains the `key` `"yoda"` we step into this block and print this statement, along with the `value` of the `"yoda"` `key`
 
 ## Adding an element to a Map
 
@@ -334,8 +406,9 @@ func main() {
 }
 ```
 
-- the `delete` function is built into the Map type, and as you can see it is very easy to use
-- `delete`takes two arguments: the Map that you want to remove something from, and the `key` of the entry that you wish to remove
+the `delete` function is built into the Map type, and as you can see it is very easy to use
+
+`delete`takes two arguments: the Map that you want to remove something from, and the `key` of the entry that you wish to remove
 
 It isn't a bad idea to use the _Comma Ok Idiom_ when wanting to remove items from a Map conditionally as well:
 
@@ -362,11 +435,15 @@ func main() {
 
 Much like in the last example of using the _Comma Ok Idiom_, we create an `if` statement that has two return values, the `value` of the `key` and a `bool` value once the expression is evaluated.
 
-- here, the value of `ok` will evaluate to `true`
-- we are throwing away the first return (`value`) because we don't need it in this exercise
-- because `ok` evaluated to `true`, we step into this `if` block and call the `delete` function
-- we pass the Map, in this case `m` as the first argument, and the `key` `"yoda"` as the second argument
-- we print out the value of `m` and see that the `key` `value` pair for `yoda` and `900` has been removed
+here, the value of `ok` will evaluate to `true`
+
+we are throwing away the first return (`value`) because we don't need it in this exercise
+
+because `ok` evaluated to `true`, we step into this `if` block and call the `delete` function
+
+we pass the Map, in this case `m` as the first argument, and the `key` `"yoda"` as the second argument
+
+we print out the value of `m` and see that the `key` `value` pair for `yoda` and `900` has been removed
 
 ## In Summary
 

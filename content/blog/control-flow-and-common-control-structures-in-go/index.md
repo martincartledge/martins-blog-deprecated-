@@ -97,9 +97,11 @@ func main() {
 
 What is happening up there?
 
-- we assign the variable `s` to the type `slice`, that `slice` will contain values of the type `int`, those values are `1, 2, 3, 4, 5`
-- when using a `range` clause we `init` two values: the `index` and the `value` - `i` and `v` here
-- in each iteration of this loop `i` (position in the array) will increment by `1` , `v` will reflect the `value` in the specified `index` of the `slice`
+we assign the variable `s` to the type `slice`, that `slice` will contain values of the type `int`, those values are `1, 2, 3, 4, 5`
+
+when using a `range` clause we `init` two values: the `index` and the `value` - `i` and `v` here
+
+in each iteration of this loop `i` (position in the array) will increment by `1` , `v` will reflect the `value` in the specified `index` of the `slice`
 
 > Important Note: Slices and Arrays are zero indexed - meaning the value of `index` will always start from `0`, not `1`
 
@@ -130,12 +132,49 @@ func main() {
 
 Let me walk you through what is happening here:
 
-- inside of the `main` function we declare the variable `n` and assign it to the value `0`
-- we use the `for` keyword to create a loop
-- inside of the loop we use the `++` operator to increment `n` by 1
-- using an `if` statement, we evaluate if the value of `n` is great than `5`
-- using the `fmt` package from the `Standard Library` from go, we print the current value of `n`
-- we iterate `5 times` until `n`'s value is greater than 5  -  then we use the `break` keyword and the execution is finished
+```go
+func main() {
+    n := 0
+```
+
+inside of the `main` function we declare the variable `n` and assign it to the value `0`
+
+```go
+for {
+```
+
+we use the `for` keyword to create a loop
+
+```go
+for {
+    n++
+```
+
+inside of the loop we use the `++` operator to increment `n` by 1
+
+```go
+if n > 5 {
+```
+
+using an `if` statement, we evaluate if the value of `n` is great than `5`
+
+```go
+fmt.Println(n)
+```
+
+using the `fmt` package from the `Standard Library` from go, we print the current value of `n`
+
+```go
+for {
+    n++
+    if n > 5 {
+        break
+    }
+    fmt.Println(n)
+}
+```
+
+we iterate `5 times` until `n`'s value is greater than 5  -  then we use the `break` keyword and the execution is finished
 
 ## Continue statements
 
@@ -151,7 +190,7 @@ import (
 func main() {
     n := 1
     for {
-        z++
+        n++
         if n > 10 {
             break
         }
@@ -170,14 +209,55 @@ func main() {
 
 In the example above I am trying to `find all numbers evenly divisible by 2`, let me walk you through how I am doing that using the `break` and `continue` statements:
 
-- inside of the `main` function we declare a variable `n` and assign it to the value `1`
-- we use the `for` keyword to create a loop
-- inside of the loop we use the `++` operator to increment `n` by 1
-- using an `if` statement, we evaluate if the value of `n` is great than `10` , this evaluates to `false` for the first `10` iterations
-- next, each iteration will evaluate if the value of `n` is _*not*_ _evenly_ divisible by 2, we can determine this by using the `modulo` operator
-- the values that are less than 10 _and_ not evenly divisible by 2 do not step inside either `if` statement
-- using the `fmt` package from the `Standard Library` from go, we print the current value of `n`
-- note: _only numbers evenly divisible by 2 be printed _ -  this is because their values do not evaluate to `true` for either `if` statement
+```go
+n := 1
+```
+
+inside of the `main` function we declare a variable `n` and assign it to the value `1`
+
+```go
+for {
+```
+
+we use the `for` keyword to create a loop
+
+```go
+for {
+    n++
+```
+
+inside of the loop we use the `++` operator to increment `n` by 1
+
+```go
+if n > 10 {
+    break
+}
+```
+
+using an `if` statement, we evaluate if the value of `n` is great than `10` , this evaluates to `false` for the first `10` iterations
+
+```go
+if n%2 != 0 {
+    continue
+}
+```
+
+next, each iteration will evaluate if the value of `n` is _*not*_ _evenly_ divisible by 2, we can determine this by using the `modulo` operator
+
+the values that are less than 10 _and_ not evenly divisible by 2 do not step inside either `if` statement
+
+```go
+fmt.Println(n)
+// 2
+// 4
+// 6
+// 8
+// 10
+```
+
+using the `fmt` package from the `Standard Library` from go, we print the current value of `n`
+
+> note: _only numbers evenly divisible by 2 be printed _ -  this is because their values do not evaluate to `true` for either `if` statement
 
 ## Conditional statements
 
