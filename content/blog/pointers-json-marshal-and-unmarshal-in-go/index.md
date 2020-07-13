@@ -41,9 +41,11 @@ We have created our first _pointer_!
 
 Let's walk through what is happening here, step-by-step:
 
-- inside of `func` `main` we declare a variable with the identifier `name` with a value of `martin` of type `string`
-- next, using the `fmt` package, we print out the _address_ of the value in memory for `name`
-- this outputs the following address: `0xc000010200`
+inside of `func` `main` we declare a variable with the identifier `name` with a value of `martin` of type `string`
+
+next, using the `fmt` package, we print out the _address_ of the value in memory for `name`
+
+this outputs the following address: `0xc000010200`
 
 This might not seem super useful right now, but let me show you how you can use this address to retrieve a value:
 
@@ -69,11 +71,15 @@ func main() {
 
 Let me walk through what is happening here, line-by-line:
 
-- first, we decalre a new variable with an identifier of `name` with a value of `martin` of type `string`
-- next, we declare a new variable with an identifier of `namePointer` with a value of a _pointer_ to the `name` variable
-- when we print out the value of `namePointer` on the next line, we receieve this address `0xc000010200`
-- next, we decalre a new variable with an identifier of `underlyingValue`, notice we are using the `*` operator, this allows us to get the _underlying value_ of a _pointer_ value; therefore, the value of `underlyingValue` is the _underlying value_ of `namePointer`
-- we print out the value of `underlyingValue` on the next line and we see that it's value is `martin`
+first, we decalre a new variable with an identifier of `name` with a value of `martin` of type `string`
+
+next, we declare a new variable with an identifier of `namePointer` with a value of a _pointer_ to the `name` variable
+
+when we print out the value of `namePointer` on the next line, we receieve this address `0xc000010200`
+
+next, we decalre a new variable with an identifier of `underlyingValue`, notice we are using the `*` operator, this allows us to get the _underlying value_ of a _pointer_ value; therefore, the value of `underlyingValue` is the _underlying value_ of `namePointer`
+
+we print out the value of `underlyingValue` on the next line and we see that it's value is `martin`
 
 Pretty cool, huh?
 
@@ -147,18 +153,68 @@ func main() {
 
 Let me walk you through what is happening here:
 
-- inside of `package` `main` we are now importing the `encoding/json` package, this allows us to use the `json` package
-- next, we create our own type with the identifier `person` of type `struct`
-- we give our `person` type three fields: `First` of type `string`, `Last` of type `String`, and `Age` of type `int`
-- inside of our `func` `main`, using the short declaration operator, we create a new variable with the identifier `me`
-- to assign a value to `me`, we use a _composite literal_ of type `person`
-- inside of our _composite literal_ we assign values to each respective field in our `person` type: `First` -> `martin`, `Last` -> `cartledge`, and `Age` -> `29`
-- next, we create another variable using the short declaration operator with the identifier `bff`
-- the value of `bff` is also a _composite literal_ of type `person`
-- the values assigned for each respective field for our `person` type inside of this _composite literal_ is: `First` -> `mikel`, `Last` -> `howarth`, and `Age` -> `29`
-- next, we create a new variable using the short declaration operator with the identifier `friends`
-- the value of `friends` will be a `slice` of type `person`, we pass the values of `me` and `bff` into our _composite literal_
-- using the `fmt` package, we print the value of `friends`: `[{martin cartledge 29} {mikel howarth 29}]`
+```go
+import (
+	"encoding/json"
+	"fmt"
+)
+```
+
+inside of `package` `main` we are now importing the `encoding/json` package, this allows us to use the `json` package
+
+```go
+type person struct {
+	First string
+	Last  string
+	Age   int
+}
+```
+
+next, we create our own type with the identifier `person` of type `struct`
+
+we give our `person` type three fields: `First` of type `string`, `Last` of type `String`, and `Age` of type `int`
+
+```go
+me := person{
+	First: "martin",
+	Last: "cartledge",
+	Age: 29,
+}
+```
+
+inside of our `func` `main`, using the short declaration operator, we create a new variable with the identifier `me`
+
+to assign a value to `me`, we use a _composite literal_ of type `person`
+
+inside of our _composite literal_ we assign values to each respective field in our `person` type: `First` -> `martin`, `Last` -> `cartledge`, and `Age` -> `29`
+
+```go
+bff := person{
+	First: "mikel",
+	Last: "howarth",
+	Age: 29,
+}
+```
+
+next, we create another variable using the short declaration operator with the identifier `bff`
+
+the value of `bff` is also a _composite literal_ of type `person`
+
+the values assigned for each respective field for our `person` type inside of this _composite literal_ is: `First` -> `mikel`, `Last` -> `howarth`, and `Age` -> `29`
+
+```go
+friends := []person{me, bff}
+```
+
+next, we create a new variable using the short declaration operator with the identifier `friends`
+
+the value of `friends` will be a `slice` of type `person`, we pass the values of `me` and `bff` into our _composite literal_
+
+```go
+fmt.Println(friends)
+```
+
+using the `fmt` package, we print the value of `friends`: `[{martin cartledge 29} {mikel howarth 29}]`
 
 > Quick Note: there are two return values when `json.Marshal` is invoked, a _result_ and an _error_
 >
@@ -166,14 +222,29 @@ Let me walk you through what is happening here:
 >
 > the type of _error_ is an `error`
 
-- for this example, I gave the _result_ the identifier `res`, and the _error_ the identifier `err`
-- I pass in `friends` as the single argument to `json.Marshal()`, keep in mind that `friends` is a `slice` of type `person`
+```go
+res, err := json.Marshal(friends)
+```
+
+for this example, I gave the _result_ the identifier `res`, and the _error_ the identifier `err`
+I pass in `friends` as the single argument to `json.Marshal()`, keep in mind that `friends` is a `slice` of type `person`
 
 > Quick Note: checking for errors immeaditely after using Marshal or Unmarshal is considered best practice, this prevents any errors or inconsistencies in your data from trickling into your code
 
-- next, we check if the value of `err` _is not_ `nil`, if this evaluates to `true` we step inside of this if statement and our error handling code is ran
-- for this example, we have no errors so the execution of our code continues
-- the last line in `func` `main` uses the `fmt` package and logs the value of `res`, our newly marshaled data
+```go
+if err != nil {
+	fmt.Println(err)
+}
+```
+
+next, we check if the value of `err` _is not_ `nil`, if this evaluates to `true` we step inside of this if statement and our error handling code is ran
+for this example, we have no errors so the execution of our code continues
+
+```go
+fmt.Println(res)
+```
+
+the last line in `func` `main` uses the `fmt` package and logs the value of `res`, our newly marshaled data
 
 This is the value of `res` post-marshal:
 
@@ -182,3 +253,73 @@ This is the value of `res` post-marshal:
 ```
 
 As you can see, we have a `slice` of values of type `byte`, pretty cool!
+
+`Unmarshal`
+
+```go
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+)
+
+type person struct {
+	First string
+	Last string
+	Age int
+}
+
+func main() {
+	rawData := `[{"First":"martin","Last":"cartledge","Age":29},{"First":"mikel","Last":"howarth","Age":29}]`
+
+	fmt.Println(rawData)
+
+	byteString := []byte(rawData)
+
+	fmt.Println(byteString)
+
+	// people := []person{}
+	var people []person
+
+	err := json.Unmarshal(byteString, &people)
+
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	fmt.Println(people)
+
+	for i, v := range people {
+		fmt.Println("index: \n", i)
+		fmt.Println(v.First, v.Last, v.Age)
+	}
+}
+```
+
+Let me walk you through what is happening here:
+
+```go
+import (
+	"encoding/json"
+	"fmt"
+)
+```
+
+you will notice that we are importing the `encoding/json` package just like we did in our previous example, we need the `json` package to use `Marshal` and `Unmarshal`
+
+```go
+type person struct {
+	First string
+	Last  string
+	Age   int
+}
+```
+
+we are also creating a new custom type with the identifier `person` with three fields: `First` of type `string`, `Last` of type `string`, and `Age` of type `int`
+
+```go
+rawData := `[{"First":"martin","Last":"cartledge","Age":29},{"First":"mikel","Last":"howarth","Age":29}]`
+```
+
+using the short declaration operator, I created a new variable with the identifier `rawData` and assigned it the value of a `slice` of `person` values represented in a JSON string
