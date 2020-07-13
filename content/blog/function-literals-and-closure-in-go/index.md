@@ -35,11 +35,15 @@ func main() {
 }
 ```
 
-- inside of `func` `main` we declare the variable `f` and assign to an _anonymous function_
-- when this function is invoked, it uses the `fmt` package to print the `string` `I am a function literal!`
-- we invoke this _function literal_ the same way we invoke _function declarations_: the _identifier_ followed by _arguments_ wrapped in parentheses `()`
-- this _function literal_ expects no _parameters_; therefore, we do not pass any _arguments_
-- once `f` is invoked, `I am a function literal` is printed and the program exits
+inside of `func` `main` we declare the variable `f` and assign to an _anonymous function_
+
+when this function is invoked, it uses the `fmt` package to print the `string` `I am a function literal!`
+
+we invoke this _function literal_ the same way we invoke _function declarations_: the _identifier_ followed by _arguments_ wrapped in parentheses `()`
+
+this _function literal_ expects no _parameters_; therefore, we do not pass any _arguments_
+
+once `f` is invoked, `I am a function literal` is printed and the program exits
 
 Let's see an example when a _function literal_ has a _parameter_:
 
@@ -60,10 +64,13 @@ func main() {
 }
 ```
 
-- inside of `func` `main` we declare the variable `f` and assign it to an _anonymous function_ that takes one parameter, `x`, of type `int`
-- using the `fmt` package, we print the `string` `my birth year is` followed by the value of `x`
-- notice when `f` is invoked we pass a single _argument_ `1990`
-- `f` prints `my birth year is 1990` and the programs exits
+inside of `func` `main` we declare the variable `f` and assign it to an _anonymous function_ that takes one parameter, `x`, of type `int`
+
+using the `fmt` package, we print the `string` `my birth year is` followed by the value of `x`
+
+notice when `f` is invoked we pass a single _argument_ `1990`
+
+`f` prints `my birth year is 1990` and the programs exits
 
 Next, let's see how we can return a `function` from a _Function Literal_:
 
@@ -89,17 +96,45 @@ func bar() func() int {
 
 `bar`:
 
-- below `func` `main`, using the `func` keyword, we create a _function declaration_ with an _identifier_ of `bar` with two _return types_: `func()` and `int`
-- these _return types_ tell us that `bar` is expected to return a _function_ and an `int` inside of that _function_
-- inside the _function body_ of `bar` we `return` an _anonymous function_ that has a _return type_ of `int`
-- inside of this _anonymous function_, we return the _value_ `2020` of _type_ `int`
+```go
+func bar() func() int {
+```
+
+below `func` `main`, using the `func` keyword, we create a _function declaration_ with an _identifier_ of `bar` with two _return types_: `func()` and `int`
+
+these _return types_ tell us that `bar` is expected to return a _function_ and an `int` inside of that _function_
+
+```go
+return func() int {
+		return 2020
+}
+```
+
+inside the _function body_ of `bar` we `return` an _anonymous function_ that has a _return type_ of `int`
+
+inside of this _anonymous function_, we return the _value_ `2020` of _type_ `int`
 
 `main`:
 
-- inside of `func` `main` we declare the variable `f` and assign it to _return value_ of the _function declaration_ `bar`
-- note: `f` is assigned to the _return value_ because we are invoking `bar`; therefore, what `bar` _returns_ will be the value that `f` holds in memory. In this case, that _return value_ is a _function_
-- `f` is invoked on the next line inside of the `Println` function from the `fmt` package
-- `bar`'s _return value_ is a function that returns the _value_ `2020` of _type_ `int`: therefore, `f()` will print `2020`
+```go
+f := bar()
+```
+
+inside of `func` `main` we declare the variable `f` and assign it to _return value_ of the _function declaration_ `bar`
+
+> note: `f` is assigned to the _return value_ because we are invoking `bar`; therefore, what `bar` _returns_ will be the value that `f` holds in memory. In this case, that _return value_ is a _function_
+
+```go
+fmt.Println(f())
+```
+
+`f` is invoked on the next line inside of the `Println` function from the `fmt` package
+
+```go
+// 2020
+```
+
+`bar`'s _return value_ is a function that returns the _value_ `2020` of _type_ `int`: therefore, `f()` will print `2020`
 
 As you can see from a few of these examples - _function literals_ can be very powerful and can be used very dynamically in your code. Remember a few things when you are thinking of using a _function literal_ instead of a _function declaration_:
 
@@ -146,21 +181,71 @@ func incrementor() func() int {
 
 `incrementor`:
 
-- first we create `incrementor`, this should look familiar to `bar` in the last section
-- `incrementor` is a _function declaration_ that returns a _function_ and an `int` inside that _function_
-- using the `var` keyword we declare the variable `x` of type `int`
-- `x` is not assigned a value; therefore, it is given a `zero value` (`0`)
-- next, we return an _anonymous function_ that is expected to `return` a _value_ of _type_ `int`
-- notice, using the `++` operator, we are incrementing the value of `x` by `1` - how is this possible? the answer is _closure_
-- after we increment `x`, we return `x`
+```go
+func incrementor() func() int {
+```
+
+first we create `incrementor`, this should look familiar to `bar` in the last section
+
+`incrementor` is a _function declaration_ that returns a _function_ and an `int` inside that _function_
+
+```go
+var x int
+```
+
+using the `var` keyword we declare the variable `x` of type `int`
+
+`x` is not assigned a value; therefore, it is given a `zero value` (`0`)
+
+```go
+return func() int {
+```
+
+next, we return an _anonymous function_ that is expected to `return` a _value_ of _type_ `int`
+
+```go
+x++
+```
+
+notice, using the `++` operator, we are incrementing the value of `x` by `1` - how is this possible? the answer is _closure_
+
+```go
+return x
+```
+
+after we increment `x`, we return `x`
 
 `main`:
 
-- inside of `func` `main` we create the variable `a` and assign it to the _return value_ of `incrementor()`
-- on the next line, `a` is invoked inside of the `Println` function from the `fmt` package
-- because the _return value_ of `a` is the _anonymous function_ inside `incrementor()`, we increment `x` by `1` and return the value `1`; therefore, `1` is printed
-- we repeat this process by invoking `a` inside of the `Println` function again
-- since we have already invoked `a` the value of `x` is `1`; therefore, when we increment `x` the value returned and printed will be `2`
+```go
+a := incrementor()
+```
+
+inside of `func` `main` we create the variable `a` and assign it to the _return value_ of `incrementor()`
+
+```go
+fmt.Println(a())
+// 1
+```
+
+on the next line, `a` is invoked inside of the `Println` function from the `fmt` package
+
+because the _return value_ of `a` is the _anonymous function_ inside `incrementor()`, we increment `x` by `1` and return the value `1`; therefore, `1` is printed
+
+```go
+fmt.Println(a())
+// 2
+```
+
+we repeat this process by invoking `a` inside of the `Println` function again
+
+since we have already invoked `a` the value of `x` is `1`; therefore, when we increment `x` the value returned and printed will be `2`
+
+```go
+b := incrementor()
+fmt.Println(b())
+// 1
+```
 
 Notice when we assign `incrementor()` to the variable `b` it does not return `3`, why is that?
 

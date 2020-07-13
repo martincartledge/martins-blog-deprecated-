@@ -40,10 +40,25 @@ func main() {
 
 In the example above, I am creating a new `struct` of type `car`.
 
-- first, I declare that I am creating a new `type`
-- then I declare an identifier for this `type`, in this case, our `type` is `car`
-- we declare our new type, `car`, to have the _underlying_ type of `struct`
-- next, we list out the `field names` paired with their `type`
+```go
+type car struct {
+```
+
+first, I declare that I am creating a new `type`
+
+then I declare an identifier for this `type`, in this case, our `type` is `car`
+
+we declare our new type, `car`, to have the _underlying_ type of `struct`
+
+```go
+type car struct {
+	model string
+	color string
+	year  int
+}
+```
+
+next, we list out the `field names` paired with their `type`
 
 ## Anonymous struct
 
@@ -71,10 +86,33 @@ func main() {
 
 Let me walk you through what is happening in this example:
 
-- we are _declaring_ a new variable, `c` of _type_ `struct`
-- then, inside the brackets `{}`, on the left-hand side, we declare our _field names_
-- on the right-hand side, we declare the _type_ of each respective _field name_
-- last, and most importantly, inside another set of brackets `{}` we declare the name and the value of these _field names_
+```go
+c := struct {
+```
+
+we are _declaring_ a new variable, `c` of _type_ `struct`
+
+```go
+c := struct {
+		model string
+		color string
+		year  int
+}
+```
+
+then, inside the brackets `{}`, on the left-hand side, we declare our _field names_
+
+on the right-hand side, we declare the _type_ of each respective _field name_
+
+```go
+{
+		model: "tacoma",
+		color: "white",
+		year:  2020,
+}
+```
+
+last, and most importantly, inside another set of brackets `{}` we declare the name and the value of these _field names_
 
 Important note: you _must_ place a comma after each entry in a `struct`, or you will get an error from the compiler that looks a little bit like this:
 
@@ -114,11 +152,25 @@ func main() {
 }
 ```
 
-- we define a new `type` with the identifier `toyota` with an underlying type of `struct`
-- using the `func` keyword, we create a new function
-- next we see `(t toyota)`, pay attention to `toyota` here, this is what is called a _receiver type_ - this means this method can _only be called by a `toyota` type_
-- in this example the `t` is a _value receiver_ - it is possible to use a _pointer receiver_ as well
-- using dot notation we can pull values from `t` - I will show you how in the next example below
+```go
+type toyota struct {
+```
+
+we define a new `type` with the identifier `toyota` with an underlying type of `struct`
+
+```go
+func (t toyota) start() {
+	fmt.Println("vroom vroom")
+}
+```
+
+using the `func` keyword, we create a new function
+
+next we see `(t toyota)`, pay attention to `toyota` here, this is what is called a _receiver type_ - this means this method can _only be called by a `toyota` type_
+
+in this example the `t` is a _value receiver_ - it is possible to use a _pointer receiver_ as well
+
+using dot notation we can pull values from `t` - I will show you how in the next example below
 
 ```go
 package main
@@ -150,13 +202,56 @@ func main() {
 
 This example is identical to the previous; however, the change to note here is what is happening inside of the `start` method.
 
-- we see that we still have a _receiver type_ of `toyota` with a _receiver value_ `t`
-- if we take a look at the `toyota` type, we see that it has three _field names_: `model`, `color`, and `year`
-- inside of `func` `main` we are creating a new variable named `t`
-- using a [composite literal](https://golang.org/ref/spec#Composite_literals), we assign the variable `t` to be of type `toyota` and assign the values `tacoma`, `white`, and `2020` to their respective _field names_
-- this is where the magic happens: using dot notation, we call the `start` method from `t`
-- because `t` is of type `toyota` it has access to the `start` method
-- inside of `start` we are again using dot notation to print out the values of the fields found in `toyota`
+```go
+func (t toyota) start() {
+	fmt.Println("Hey! I'm a ", t.color, t.year, t.model)
+}
+```
+
+we see that we still have a _receiver type_ of `toyota` with a _receiver value_ `t`
+
+```go
+type toyota struct {
+	model string
+	color string
+	year  int
+}
+```
+
+if we take a look at the `toyota` type, we see that it has three _field names_: `model`, `color`, and `year`
+
+```go
+func main() {
+	t := toyota{
+```
+
+inside of `func` `main` we are creating a new variable named `t`
+
+```go
+t := toyota{
+	model: "tacoma",
+	color: "white",
+	year:  2020,
+}
+```
+
+using a [composite literal](https://golang.org/ref/spec#Composite_literals), we assign the variable `t` to be of type `toyota` and assign the values `tacoma`, `white`, and `2020` to their respective _field names_
+
+```go
+t.start()
+```
+
+this is where the magic happens: using dot notation, we call the `start` method from `t`
+
+because `t` is of type `toyota` it has access to the `start` method
+
+```go
+func (t toyota) start() {
+	fmt.Println("Hey! I'm a ", t.color, t.year, t.model)
+}
+```
+
+inside of `start` we are again using dot notation to print out the values of the fields found in `toyota`
 
 ## Interfaces
 
@@ -203,18 +298,83 @@ func main() {
 }
 ```
 
-- I start by creating a new `interface` - I do this by writing the `type` keyword, followed by the identifier `car`, and lastly the underlying type _struct_
-- next, I declare two `struct` `types`, `toyota` and `subaru` - they both have a field named `model` with the type `string`
-- I create two _methods_ that are both called `start` and have _value receivers_ and accept their respective _receiver type_ `toyota` and `subaru`
-- I create a function named `getModel` that takes a value of type `car` as a parameter
-- inside of the `getModel` function, I print out the returned value of the `start` method
-- in the `main` function I declare two variables, `t` and `s`
-- using a composite literal, `t` is assigned to the value of type `tacoma` with the field name `model` and respective value `tacoma`
-- the same process is done on the next line, the only differences being the variable is named `s` and the type is `subaru`
-- you might have noticed that both the `tacoma` and `subaru` types have a method named `start`
-- since `start` is a part of the `car` `interface`, both the `tacoma` and `subaru` types can _also_ be of type `car`
-- last, we invoke the `getModel` function twice, first by passing in `t` as an argument, and then by passing `s` as an argument
-- the value of the field name `model` is returned for `t` and `s`
+```go
+type car interface {
+	start() string
+}
+```
+
+I start by creating a new `interface` - I do this by writing the `type` keyword, followed by the identifier `car`, and lastly the underlying type _struct_
+
+```go
+type toyota struct {
+	model string
+}
+type subaru struct {
+	model string
+}
+```
+
+next, I declare two `struct` `types`, `toyota` and `subaru` - they both have a field named `model` with the type `string`
+
+```go
+func (t toyota) start() string {
+	return t.model
+}
+
+func (s subaru) start() string {
+	return s.model
+}
+```
+
+I create two _methods_ that are both called `start` and have _value receivers_ and accept their respective _receiver type_ `toyota` and `subaru`
+
+```go
+func getModel(c car) {
+```
+
+I create a function named `getModel` that takes a value of type `car` as a parameter
+
+```go
+fmt.Println(c.start())
+```
+
+inside of the `getModel` function, I print out the returned value of the `start` method
+
+```go
+func main() {
+	t := toyota{model: "tacoma"}
+	s := subaru{model: "forester"}
+```
+
+in the `main` function I declare two variables, `t` and `s`
+
+```go
+t := toyota{model: "tacoma"}
+```
+
+using a composite literal, `t` is assigned to the value of type `tacoma` with the field name `model` and respective value `tacoma`
+
+```go
+s := subaru{model: "forester"}
+```
+
+the same process is done on the next line, the only differences being the variable is named `s` and the type is `subaru`
+
+you might have noticed that both the `tacoma` and `subaru` types have a method named `start`
+
+since `start` is a part of the `car` `interface`, both the `tacoma` and `subaru` types can _also_ be of type `car`
+
+```go
+getModel(t)
+// tacoma
+getModel(s)
+// forester
+```
+
+last, we invoke the `getModel` function twice, first by passing in `t` as an argument, and then by passing `s` as an argument
+
+the value of the field name `model` is returned for `t` and `s`
 
 ## In Summary
 

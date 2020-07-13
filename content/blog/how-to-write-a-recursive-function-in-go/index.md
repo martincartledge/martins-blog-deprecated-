@@ -41,9 +41,11 @@ func main() {
 }
 ```
 
-- Inside of `func` `main` we declare the variable `n` and assign `n` to the return value of the `factorial` function
-- The `factorial` function has a single argument, `4` of type `int`
-- On the next line of execution, using the `fmt` package, we print out the value of `n`
+Inside of `func` `main` we declare the variable `n` and assign `n` to the return value of the `factorial` function
+
+The `factorial` function has a single argument, `4` of type `int`
+
+On the next line of execution, using the `fmt` package, we print out the value of `n`
 
 > Quick note: in every Recursive function, there needs to be a "base case".
 > The base case is most commonly an if statement that when evaluated to "true"
@@ -61,12 +63,17 @@ func factorial(n int) int {
 }
 ```
 
-- Below the `main` function, we declare a function with an identifier of `factorial`
-- The function `factorial` has a single parameter, `n` of type `int`
-- The function `factorial` returns a value of type `int`
-- In this example, our _base case_ in `factorial` is an `if` statement that checks if the value of `n` is `0`
-- Because our argument `n` is `4`, this evaluates to `false` and we continue to the next line of execution
-- Our next line is a `return` statement that has the expression `n * factorial(n-1)` what does this mean?
+Below the `main` function, we declare a function with an identifier of `factorial`
+
+The function `factorial` has a single parameter, `n` of type `int`
+
+The function `factorial` returns a value of type `int`
+
+In this example, our _base case_ in `factorial` is an `if` statement that checks if the value of `n` is `0`
+
+Because our argument `n` is `4`, this evaluates to `false` and we continue to the next line of execution
+
+Our next line is a `return` statement that has the expression `n * factorial(n-1)` what does this mean?
 
 `n * factorial(n-1)`:
 
@@ -80,10 +87,13 @@ func factorial(n int) int {
 }
 ```
 
-- in the first iteration, the value of `n` is `4` so we can write this expression like this: `4 * factorial(4-1)`
-- we can do the subtraction for the argument for `factorial`, when we do the expression looks like this: `4 * factorial(3)`
-- now, we know that we have the value of `4`; however, we invoke `factorial` again with the argument `3`
-- because we invoke `factorial`, we jump to the first line of execution in the function
+in the first iteration, the value of `n` is `4` so we can write this expression like this: `4 * factorial(4-1)`
+
+we can do the subtraction for the argument for `factorial`, when we do the expression looks like this: `4 * factorial(3)`
+
+now, we know that we have the value of `4`; however, we invoke `factorial` again with the argument `3`
+
+because we invoke `factorial`, we jump to the first line of execution in the function
 
 ```go
 func factorial(n int) int {
@@ -95,10 +105,13 @@ func factorial(n int) int {
 }
 ```
 
-- we know that the value of `n` is now `3`; therefore, our _base case_ still evaluates to `false`
-- now that the value of `n` is `3`, our `return` statement now looks like this: `4 * 3 * factorial(3-1)`
-- simplified: `4 * 3 * factorial(2)`
-- we invoke `factorial` again with the argument being the value `2` of type `int`
+we know that the value of `n` is now `3`; therefore, our _base case_ still evaluates to `false`
+
+now that the value of `n` is `3`, our `return` statement now looks like this: `4 * 3 * factorial(3-1)`
+
+simplified: `4 * 3 * factorial(2)`
+
+we invoke `factorial` again with the argument being the value `2` of type `int`
 
 ```go
 func factorial(n int) int {
@@ -110,10 +123,13 @@ func factorial(n int) int {
 }
 ```
 
-- our _base case_ still evaluates to `false` because `2` is not equal to `0`
-- our `return` statement now looks something like this: `4 * 3 * 2 * factorial(2-1)`
-- simplified: `4 * 3 * 2 * factorial(1)`
-- we invoke `factorial` again with the argument being the value `1` of type `int`
+our _base case_ still evaluates to `false` because `2` is not equal to `0`
+
+our `return` statement now looks something like this: `4 * 3 * 2 * factorial(2-1)`
+
+simplified: `4 * 3 * 2 * factorial(1)`
+
+we invoke `factorial` again with the argument being the value `1` of type `int`
 
 ```go
 func factorial(n int) int {
@@ -125,9 +141,11 @@ func factorial(n int) int {
 }
 ```
 
-- our _base case_ still evaluates to `false` because `1` is not equal to `0`
-- our `return` statement now looks something like this: `4 * 3 * 2 * 1 * factorial(1-1)`
-- simplified: `4 * 3 * 2 * 1 * factorial(0)`
+our _base case_ still evaluates to `false` because `1` is not equal to `0`
+
+our `return` statement now looks something like this: `4 * 3 * 2 * 1 * factorial(1-1)`
+
+simplified: `4 * 3 * 2 * 1 * factorial(0)`
 
 ```go
 func factorial(n int) int {
@@ -140,9 +158,11 @@ func factorial(n int) int {
 }
 ```
 
-- this time, our _base case_ still evaluates to `true` because `0` _is equal_ to `0`
-- inside of our _base case_ we return the value `1` of type `int`
-- now that our Recursion is done, our final `return` statement will look like this: `return 4 * 3 * 2 * 1` which evaluates to the value `24` of type `int`
+this time, our _base case_ still evaluates to `true` because `0` _is equal_ to `0`
+
+inside of our _base case_ we return the value `1` of type `int`
+
+now that our Recursion is done, our final `return` statement will look like this: `return 4 * 3 * 2 * 1` which evaluates to the value `24` of type `int`
 
 `main`:
 
@@ -154,7 +174,7 @@ func main() {
 }
 ```
 
-- now that all execution is complete, the value of `n` is evaluated to `24`, this value is printed out on the next line
+now that all execution is complete, the value of `n` is evaluated to `24`, this value is printed out on the next line
 
 ## In Summary
 
