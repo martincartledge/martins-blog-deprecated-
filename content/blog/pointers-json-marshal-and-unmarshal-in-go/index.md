@@ -71,13 +71,13 @@ func main() {
 
 Let me walk through what is happening here, line-by-line:
 
-first, we decalre a new variable with an identifier of `name` with a value of `martin` of type `string`
+first, we declare a new variable with an identifier of `name` with a value of `martin` of type `string`
 
 next, we declare a new variable with an identifier of `namePointer` with a value of a _pointer_ to the `name` variable
 
-when we print out the value of `namePointer` on the next line, we receieve this address `0xc000010200`
+when we print out the value of `namePointer` on the next line, we receive this address `0xc000010200`
 
-next, we decalre a new variable with an identifier of `underlyingValue`, notice we are using the `*` operator, this allows us to get the _underlying value_ of a _pointer_ value; therefore, the value of `underlyingValue` is the _underlying value_ of `namePointer`
+next, we declare a new variable with an identifier of `underlyingValue`, notice we are using the `*` operator, this allows us to get the _underlying value_ of a _pointer_ value; therefore, the value of `underlyingValue` is the _underlying value_ of `namePointer`
 
 we print out the value of `underlyingValue` on the next line and we see that it's value is `martin`
 
@@ -89,11 +89,11 @@ _Pointers_ allow us to store references to data at a low level, their address in
 
 JSON (_JavaScript Object Notation_) is a widely used format for sending data in a wide variety of applications. In Go, it is common practice to use two methods when sending JSON and receiving JSON, `Marshal` and `Unmarshal`.
 
-Like most things in the Go ecosystem, these functions are named very semantically. Let's look at what the defintion of `Marshal` and `Unmarshal` is in the realm of computer science.
+Like most things in the Go ecosystem, these functions are named very semantically. Let's look at what the definition of `Marshal` and `Unmarshal` is in the realm of computer science.
 
 > Marshal - the process of transforming memory representation of an object to a data format for storage or transmission. This is typically used when data must be moved between different parts of an application.
 
-Essentially, when you use the `Marshal` function on data, commonly refered to as _Marshalling_, you are transforming your data into a format that is better suited for storage or for being transmitted to somewhere else in your application.
+Essentially, when you use the `Marshal` function on data, commonly referred to as _Marshalling_, you are transforming your data into a format that is better suited for storage or for being transmitted to somewhere else in your application.
 
 > Unmarshal - the process of transforming a representation of an object that was used for storage or transmission to a representation of the object that is executable
 
@@ -160,7 +160,7 @@ import (
 )
 ```
 
-inside of `package` `main` we are now importing the `encoding/json` package, this allows us to use the `json` package
+Inside of `package` `main` we are now importing the `encoding/json` package, this allows us to use the `json` package
 
 ```go
 type person struct {
@@ -170,9 +170,9 @@ type person struct {
 }
 ```
 
-next, we create our own type with the identifier `person` of type `struct`
+Next, we create our own type with the identifier `person` of type `struct`
 
-we give our `person` type three fields: `First` of type `string`, `Last` of type `String`, and `Age` of type `int`
+We give our `person` type three fields: `First` of type `string`, `Last` of type `String`, and `Age` of type `int`
 
 ```go
 me := person{
@@ -182,11 +182,11 @@ me := person{
 }
 ```
 
-inside of our `func` `main`, using the short declaration operator, we create a new variable with the identifier `me`
+Inside of our `func` `main`, using the short declaration operator, we create a new variable with the identifier `me`
 
-to assign a value to `me`, we use a _composite literal_ of type `person`
+To assign a value to `me`, we use a _composite literal_ of type `person`
 
-inside of our _composite literal_ we assign values to each respective field in our `person` type: `First` -> `martin`, `Last` -> `cartledge`, and `Age` -> `29`
+Inside of our _composite literal_ we assign values to each respective field in our `person` type: `First` -> `martin`, `Last` -> `cartledge`, and `Age` -> `29`
 
 ```go
 bff := person{
@@ -196,19 +196,19 @@ bff := person{
 }
 ```
 
-next, we create another variable using the short declaration operator with the identifier `bff`
+Next, we create another variable using the short declaration operator with the identifier `bff`
 
-the value of `bff` is also a _composite literal_ of type `person`
+The value of `bff` is also a _composite literal_ of type `person`
 
-the values assigned for each respective field for our `person` type inside of this _composite literal_ is: `First` -> `mikel`, `Last` -> `howarth`, and `Age` -> `29`
+The values assigned for each respective field for our `person` type inside of this _composite literal_ is: `First` -> `mikel`, `Last` -> `howarth`, and `Age` -> `29`
 
 ```go
 friends := []person{me, bff}
 ```
 
-next, we create a new variable using the short declaration operator with the identifier `friends`
+Next, we create a new variable using the short declaration operator with the identifier `friends`
 
-the value of `friends` will be a `slice` of type `person`, we pass the values of `me` and `bff` into our _composite literal_
+The value of `friends` will be a `slice` of type `person`, we pass the values of `me` and `bff` into our _composite literal_
 
 ```go
 fmt.Println(friends)
@@ -226,10 +226,11 @@ using the `fmt` package, we print the value of `friends`: `[{martin cartledge 29
 res, err := json.Marshal(friends)
 ```
 
-for this example, I gave the _result_ the identifier `res`, and the _error_ the identifier `err`
+For this example, I gave the _result_ the identifier `res`, and the _error_ the identifier `err`
+
 I pass in `friends` as the single argument to `json.Marshal()`, keep in mind that `friends` is a `slice` of type `person`
 
-> Quick Note: checking for errors immeaditely after using Marshal or Unmarshal is considered best practice, this prevents any errors or inconsistencies in your data from trickling into your code
+> Quick Note: checking for errors immediately after using Marshal or Unmarshal is considered best practice, this prevents any errors or inconsistencies in your data from trickling into your code
 
 ```go
 if err != nil {
@@ -237,14 +238,15 @@ if err != nil {
 }
 ```
 
-next, we check if the value of `err` _is not_ `nil`, if this evaluates to `true` we step inside of this if statement and our error handling code is ran
-for this example, we have no errors so the execution of our code continues
+Next, we check if the value of `err` _is not_ `nil`, if this evaluates to `true` we step inside of this if statement and our error handling code is ran
+
+For this example, we have no errors so the execution of our code continues
 
 ```go
 fmt.Println(res)
 ```
 
-the last line in `func` `main` uses the `fmt` package and logs the value of `res`, our newly marshaled data
+The last line in `func` `main` uses the `fmt` package and logs the value of `res`, our newly marshaled data
 
 This is the value of `res` post-marshal:
 
@@ -306,7 +308,7 @@ import (
 )
 ```
 
-you will notice that we are importing the `encoding/json` package just like we did in our previous example, we need the `json` package to use `Marshal` and `Unmarshal`
+You will notice that we are importing the `encoding/json` package just like we did in our previous example, we need the `json` package to use `Marshal` and `Unmarshal`
 
 ```go
 type person struct {
@@ -316,10 +318,82 @@ type person struct {
 }
 ```
 
-we are also creating a new custom type with the identifier `person` with three fields: `First` of type `string`, `Last` of type `string`, and `Age` of type `int`
+We are also creating a new custom type with the identifier `person` with three fields: `First` of type `string`, `Last` of type `string`, and `Age` of type `int`
 
 ```go
 rawData := `[{"First":"martin","Last":"cartledge","Age":29},{"First":"mikel","Last":"howarth","Age":29}]`
 ```
 
-using the short declaration operator, I created a new variable with the identifier `rawData` and assigned it the value of a `slice` of `person` values represented in a JSON string
+Using the short declaration operator, I created a new variable with the identifier `rawData` and assigned it the value of a `slice` of `person` values represented in a JSON string
+
+```go
+fmt.Println(rawData)
+```
+
+On the next line, using the `fmt` package, we print out the value of `rawData`:
+
+```go
+[{"First":"martin","Last":"cartledge","Age":29},{"First":"mikel","Last":"howarth","Age":29}]
+```
+
+Next, using the short declaration operator, we declare a new variable with the identifier `byteString`, any idea of what we might be doing next?
+
+That's right, we are setting the value of `byteString` to a `slice` of values of type `byte`. This line is complete once we pass the `rawData` value into our _composite literal_
+
+Using the `fmt` package, we print out the value of `byteString`:
+
+```go
+[91 123 34 70 105 114 115 116 34 58 34 109 97 114 116 105 110 34 44 34 76 97 115 116 34 58 34 99 97 114 116 108 101 100 103 101 34 44 34 65 103 101 34 58 50 57 125 44 123 34 70 105 114 115 116 34 58 34 109 105 107 101 108 34 44 34 76 97 115 116 34 58 34 104 111 119 97 114 116 104 34 44 34 65 103 101 34 58 50 57 125 93]
+```
+
+Using the `var` keyword, we create a new variable with the identifier `people` that will be a `slice` of values of type `person` (our custom type we created)
+
+```go
+err := json.Unmarshal(byteString, &people)
+```
+
+This is where it gets interesting. notice that we are assigning only one return value? that is because `json.Unmarshal()` takes two arguments, the _value_ you would like to _Unmarshal_ or _decode_, and a _pointer_ (address in memory) of the variable you would like to assign the _Unmarshalled_ data to.
+
+```go
+if err != nil {
+		fmt.Println(err)
+}
+```
+
+Following common convention, next, we immediately check for an error, if we have one we print that error out
+
+> Note: depending on your application and the actions you take after you Unmarshal, you might want to stop all execution. I will talk about this in the future post, but for now you can read more about that [right here]()
+
+```go
+[{martin cartledge 29} {mikel howarth 29}]
+```
+
+Using the `fmt` package, we print out the value of `people`. Look at that! Our data is in the same shape as how we started, very cool.
+
+For the sake of using our custom type `person` to the fullest, I want to iterate over our newly _Unmarshalled_ data and print out their values
+
+```go
+for i, v := range people {
+		fmt.Println("index: ", i)
+		fmt.Println("First: ", v.First, "Last: ", v.Last, "Age: ", v.Age)
+}
+```
+
+Above, we are using the `for` keyword to create a `for` statement
+
+This `for` loop will return two values, an `index` and a `value` for each iteration, we assign these values to the variables `i` and `v` respectively
+
+Inside of the `for` loop, using the `fmt` package, we print out the value of `i` (`index`), on the next line we print out the value of each field in our `person` type: `First`, `Last`, and `Age`
+
+```go
+index:  0
+First: martin Last: cartledge Age: 29
+index:  1
+First: mikel Last: howarth Age: 29
+```
+
+Above is our result, pretty cool huh?
+
+## In Summary
+
+Go makes creating and reading memory addresses (`Pointers`), encoding data (`json.Marshal`), and decoding data (`json.Unmarshal`) a painless endeavor. Passing data throughout your application is made easier and more performant with the help of these features of the Go programming language. I hope you learned something new about these features, and if you were already familiar with them, I hope you walked away learning something new about them. Next week I will be talking about `sort slice`, `sort custom`, and `bcrypt`. See you then, and thanks for reading!
