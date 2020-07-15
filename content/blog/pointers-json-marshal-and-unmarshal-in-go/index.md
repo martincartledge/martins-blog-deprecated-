@@ -1,5 +1,5 @@
 ---
-title: Pointers, JSON Marshal and Unmarshal in Go
+title: Pointers, Marshalling, and Unmarshalling Data in Go
 date: "2020-07-15T22:40:32.169Z"
 description: "Learning Go - Week 9 - Pointers, JSON Marshal and Unmarshal in Go"
 ---
