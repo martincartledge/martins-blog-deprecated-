@@ -4,7 +4,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9730c6b1-b1d9-42b3-b66d-de6677bfdf62/deploy-status)](https://app.netlify.com/sites/martinportfolio/deploys)
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-13-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors)
 <!-- ALL-CONTRIBUTORS-BADGE:END --> 
 
 Martin's personal blog 
@@ -22,5 +22,3 @@ If you see any typos or formatting errors in a post, or any other issue that nee
 ## License
 
 This project is open source and available under the [MIT License](LICENSE).
-
-## Contributors
