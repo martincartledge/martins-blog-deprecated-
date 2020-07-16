@@ -46,3 +46,56 @@ str := []string{"c", "a", "b"}
 Inside of our `func` `main` we create a new variable with the identifier `str`
 
 The value of `str` is a `slice` of values that are of type `string`. We use a _composite literal_ to assign those values
+
+```go
+sort.Strings(str)
+```
+We then use the `sort` package to invoke the `Strings` method and pass the `str` variable as the only arugment
+
+> Note: the `sort` methods are specific to their built-in type i.e. `string` -> `Strings`, `int` -> `Ints`, etc.
+
+```go
+fmt.Println(str)
+// [a, b, c]
+```
+We use the `fmt` package to print the result, and we can see that the value of `str` has now been properly sorted
+
+Let me show you an example of sorting values of type `int`
+
+```go
+package main
+
+import (
+	"fmt"
+	"sort"
+)
+
+func main() {
+	ints := []int{4, 1, 9, 3, 8}
+
+	sort.Ints(ints)
+
+	fmt.Println(ints)
+	// [1, 3, 4, 8, 9]
+}
+```
+
+Inside of our `func` `main` we create a new variable with the identifier `ints`
+
+The value of `ints` is a `slice` of values that are of type `int`. We use a *composite literal* to assign those values
+
+```go
+sort.Ints(ints)
+```
+We then use the `sort` package to invoke the `Ints` method and pass the `ints` variable as the only argument
+
+```go
+fmt.Println(ints)
+// [1, 3, 4, 8, 9]
+```
+We use the `fmt` package to print the result, and we can see that the value of `ints` has now been properly sorted
+
+But what if you need something a little more in-depth, or customized? Well, you can certianly do that with ease in Go. Let me show you some examples of some custom sorting functions that can add a lot of value to your programs.
+
+## Custom Sort Functions
+
