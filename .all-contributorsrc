@@ -1,0 +1,9 @@
+{
+  "files": ["README.md"],
+  "contributorsPerLine": 7,
+  "projectName": "martins-blog",
+  "projectOwner": "martincartledge",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
