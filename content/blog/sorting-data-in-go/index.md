@@ -50,6 +50,7 @@ The value of `str` is a `slice` of values that are of type `string`. We use a _c
 ```go
 sort.Strings(str)
 ```
+
 We then use the `sort` package to invoke the `Strings` method and pass the `str` variable as the only arugment
 
 > Note: the `sort` methods are specific to their built-in type i.e. `string` -> `Strings`, `int` -> `Ints`, etc.
@@ -58,6 +59,7 @@ We then use the `sort` package to invoke the `Strings` method and pass the `str`
 fmt.Println(str)
 // [a, b, c]
 ```
+
 We use the `fmt` package to print the result, and we can see that the value of `str` has now been properly sorted
 
 Let me show you an example of sorting values of type `int`
@@ -82,20 +84,85 @@ func main() {
 
 Inside of our `func` `main` we create a new variable with the identifier `ints`
 
-The value of `ints` is a `slice` of values that are of type `int`. We use a *composite literal* to assign those values
+The value of `ints` is a `slice` of values that are of type `int`. We use a _composite literal_ to assign those values
 
 ```go
 sort.Ints(ints)
 ```
+
 We then use the `sort` package to invoke the `Ints` method and pass the `ints` variable as the only argument
 
 ```go
 fmt.Println(ints)
 // [1, 3, 4, 8, 9]
 ```
+
 We use the `fmt` package to print the result, and we can see that the value of `ints` has now been properly sorted
 
 But what if you need something a little more in-depth, or customized? Well, you can certianly do that with ease in Go. Let me show you some examples of some custom sorting functions that can add a lot of value to your programs.
 
 ## Custom Sort Functions
 
+Let's just right into an example
+
+```go
+package main
+
+import (
+	"fmt"
+	"sort"
+)
+
+type Person struct {
+	First string
+	Age int
+}
+
+type ByAge []Person
+
+func (a ByAge) Len() int {
+	return len(a)
+}
+
+func (a ByAge) Swap(i, j int) {
+	a[i], a[j] = a[j], a[i]
+}
+
+func (a ByAge) Less(i, j int) bool {
+	return a[i].Age < a[j].Age
+}
+
+func main() {
+	me := Person{"martin", 29}
+	brother := Person{"noah", 20}
+	sisterOne := Person{"miranda", 26}
+	sisterTwo := Person{"alexis", 22}
+
+	family := []Person{me, brother, sisterOne, sisterTwo}
+
+	fmt.Println(family)
+
+	sort.Sort(ByAge(family))
+
+	fmt.Println(family)
+}
+```
+
+To make any sorting happen, we have to make sure that we import the `sort` package
+
+```go
+type Person struct {
+	First string
+	Age int
+}
+```
+
+Next, we create a custom type with the identifier `Person` which is of type `struct`
+
+The fields for our `Person` type are: `First` of type `string` and `Age` of type `int`
+
+```go
+type ByAge []Person
+```
+
+We create another custom type with an identifier `ByAge`, it is a `slice` of our other custom type `Person`
