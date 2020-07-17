@@ -166,3 +166,5 @@ type ByAge []Person
 ```
 
 We create another custom type with an identifier `ByAge`, it is a `slice` of our other custom type `Person`
+
+Next
