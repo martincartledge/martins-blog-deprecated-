@@ -1,12 +1,14 @@
 {
-  "files": [
-    "README.md"
-  ],
-  "contributorsPerLine": 7,
   "projectName": "martins-blog",
   "projectOwner": "martincartledge",
   "repoType": "github",
   "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "none",
   "skipCi": true,
   "contributors": [
     {
@@ -18,5 +20,5 @@
         "tool"
       ]
     }
-  ]
+  ]  "contributorsPerLine": 7
 }

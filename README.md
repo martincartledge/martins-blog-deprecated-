@@ -4,8 +4,8 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9730c6b1-b1d9-42b3-b66d-de6677bfdf62/deploy-status)](https://app.netlify.com/sites/martinportfolio/deploys)
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END --> 
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
@@ -24,6 +24,11 @@ If you see any typos or formatting errors in a post, or any other issue that nee
 ## Contributors
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ## License
