@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "martins-blog",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "Gatsby and Markdown powered personal blog",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Martin Cartledge <martin@hey.com>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/martincartledge/martins-blog/issues"
   },
   "dependencies": {
     "@jlengstorf/get-share-image": "^0.7.1",
@@ -40,15 +40,17 @@
   "devDependencies": {
     "prettier": "^1.19.1"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://github.com/martincartledge/martins-blog",
   "keywords": [
-    "gatsby"
+    "Go",
+    "Blog",
+    "Prof Ape"
   ],
   "license": "MIT",
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "https://github.com/martincartledge/martins-blog"
   },
   "scripts": {
     "build": "gatsby build",
