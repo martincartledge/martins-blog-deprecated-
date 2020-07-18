@@ -1,9 +1,22 @@
 {
-  "files": ["README.md"],
+  "files": [
+    "README.md"
+  ],
   "contributorsPerLine": 7,
   "projectName": "martins-blog",
   "projectOwner": "martincartledge",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "skipCi": true
+  "skipCi": true,
+  "contributors": [
+    {
+      "login": "mikelbrierly",
+      "name": "Mikel Howarth",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/13723156?v=4",
+      "profile": "http://mikel.tech",
+      "contributions": [
+        "tool"
+      ]
+    }
+  ]
 }
