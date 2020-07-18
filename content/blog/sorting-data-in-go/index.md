@@ -167,4 +167,28 @@ type ByAge []Person
 
 We create another custom type with an identifier `ByAge`, it is a `slice` of our other custom type `Person`
 
-Next
+Next, we create three functions that all take a _receiver type_ with an identifier of `s` of type `ByAge`.
+
+> Note: we have to create these three functions because the `Sort` function makes one call to a `Len` function to determine length, and then makes calls to `Less` and `Swap`. You can read more about that in the [official Go docs](https://golang.org/pkg/sort/#Sort)
+
+Let's walk through each of these functions I have created starting with `Len`
+
+```go
+func (a ByAge) Len() int {
+	return len(a)
+}
+```
+
+As mentioned earlier, this function has a _receiver type_ with an identifier of `a` and of type `ByAge`
+
+The identifier of this function is `Len`
+
+We pass the value of `a`, supplied from our _receiver_, as the only arugument for the `len` function that we `return` from `Len`
+
+Next, we create the `Swap` function
+
+```go
+func (a ByAge) Swap(i, j int) {
+	a[i], a[j] = a[j], a[i]
+}
+```
