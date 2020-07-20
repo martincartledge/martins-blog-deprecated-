@@ -4,7 +4,7 @@ date: "2020-07-22T22:40:32.169Z"
 description: "Learning Go - Week 10"
 ---
 
-This is the tenth entry of my weekly series _Learning Go_. Last week I talked about [Pointers, Marshalling, and Unmarshalling Data in Go](). This week I will be talking about how to sort your data in a Go Program. Let's get to it.
+This is the tenth entry of my weekly series _Learning Go_. Last week I talked about [Pointers, Marshalling, and Unmarshalling Data in Go](https://www.martincartledge.io/pointers-json-marshal-and-unmarshal-in-go/). This week I will be talking about how to sort your data in a Go Program. Let's get to it.
 
 I will be showing you multiple examples of how to sort your data, these examples can be grouped into two categories:
 
@@ -39,26 +39,26 @@ func main() {
 
 
 Inside of our `func` `main` we create a new variable with the identifier `str`
+
+The value of `str` is a `slice` of values that are of type `string`. We use a _composite literal_ to assign those values
 ```go
 str := []string{"c", "a", "b"}
 ```
 
-The value of `str` is a `slice` of values that are of type `string`. We use a _composite literal_ to assign those values
 
+We then use the `sort` package to invoke the `Strings` method and pass the `str` variable as the only argument
 ```go
 sort.Strings(str)
 ```
 
-We then use the `sort` package to invoke the `Strings` method and pass the `str` variable as the only argument
-
 > Note: the `sort` methods are specific to their built-in type i.e. `string` -> `Strings`, `int` -> `Ints`, etc.
 
+
+We use the `fmt` package to print the result, and we can see that the value of `str` has now been properly sorted
 ```go
 fmt.Println(str)
 // [a, b, c]
 ```
-
-We use the `fmt` package to print the result, and we can see that the value of `str` has now been properly sorted
 
 Let me show you an example of sorting values of type `int`
 
