@@ -165,7 +165,7 @@ We create another custom type with an identifier `ByAge`, it is a `slice` of our
 type ByAge []Person
 ```
 
-Next, we create three functions that all take a _receiver type_ with an identifier of `s` of type `ByAge`.
+Next, we create three functions that all take a _receiver type_ with an identifier of `a` of type `ByAge`.
 
 > Note: we have to create these three functions because the `Sort` function makes one call to a `Len` function to determine length, and then makes calls to `Less` and `Swap`. You can read more about that in the [official Go docs](https://golang.org/pkg/sort/#Sort)
 
