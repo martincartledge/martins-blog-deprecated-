@@ -177,7 +177,7 @@ The next few lines should raise some eyebrows, however. Do you notice that our `
 
 This is the power of _Goroutines_. The Go runtime allows us to write code that can be executed in a concurrent way.
 
-### WaitGroups
+## WaitGroups
 
 Using _WaitGroups_ to wait for multiple _goroutines_ to finish is common practice when using Go. _WaitGroup_ is a _type_ which is a part of the `sync` package.
 
