@@ -27,13 +27,13 @@ This is the eleventh entry of my weekly series _Learning Go_. Last week I talked
 
 ## Concurrency in Go
 
-- Shared values are passed around on Channels
+- Shared values are passed around on [Channels](https://gobyexample.com/channels)
 - Never shared on separate threads of execution
 - Does not communicate by sharing memory, share memory by communicating
 
 ## Go Routines
 
-- Multiplexed
+- [Multiplexed](https://en.wikipedia.org/wiki/Multiplexing)
 - Used with functions or methods
 - Used with the `go` keyword
 
