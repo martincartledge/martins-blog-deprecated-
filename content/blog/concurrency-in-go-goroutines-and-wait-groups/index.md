@@ -8,16 +8,25 @@ This is the eleventh entry of my weekly series _Learning Go_. Last week I talked
 
 ## Concurrency vs. Parallelism
 
-- Natively takes advantage of multiple core processors
-- Open-sourced in 2012
-- Writing code on one CPU will _not_ run your code in parallel
-- Concurrency is a pattern to allow code to execute in parallel
-
 ## Concurrency
 
 > the ability for various parts of a program to run (executed) out-of-order, or in partial order without affecting the final result
 
+- Designed to _handle more_ than one task at once
+- Able to make progress on more than one task at a time, but _not_ simultaneously
+- Can work with 1-core CPU; however, the system decides when to start each task
 - Concurrency is made difficult by the subtleties required to implement correctly across shared variables
+
+## Parallelism
+
+> the ability to perform several computations at the same time (simultaneously)
+
+- Designed to _do more_ than one task at once
+- Able to execute multiple tasks in a multi-core CPU
+- Must have multi-core CPU
+
+## Concurrency in Go
+
 - Shared values are passed around on Channels
 - Never shared on separate threads of execution
 - Does not communicate by sharing memory, share memory by communicating
