@@ -228,7 +228,7 @@ func main() {
 
 Let's walk through what is happening, line-by-line:
 
-As I mentioned earlier, since the _WaitGroup_ is a time from the `sort` package, we need to make sure we import it
+As I mentioned earlier, since the _WaitGroup_ is called from the `sync` package, we need to make sure we import it
 
 ```go
 import (
