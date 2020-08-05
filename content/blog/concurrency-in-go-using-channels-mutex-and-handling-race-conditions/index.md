@@ -1,5 +1,5 @@
 ---
-title: Concurrency in Go - Using Channels, Mutex, and Handling Race Conditions
+title: Concurrency in Go - Using Channels and Handling Race Conditions
 date: "2020-08-05T22:40:32.169Z"
 description: "Learning Go - Week 12"
 ---
