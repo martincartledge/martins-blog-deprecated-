@@ -233,7 +233,7 @@ As I mentioned earlier, since the _WaitGroup_ is called from the `sync` package,
 ```go
 import (
 	"fmt"
-	"sort"
+	"sync"
 )
 ```
 
