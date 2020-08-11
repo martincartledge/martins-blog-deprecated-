@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
         marginLeft: 0,
       }}
     >
-      <h5
+      <h3
         style={{
           fontFamily: `Montserrat, sans-serif`,
           width: `100%`,
@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
         >
           martin cartledge
         </a>
-      </h5>
+      </h3>
       <h5
         style={{
           width: `auto`,
