@@ -32,7 +32,7 @@ const Layout = ({ children }) => {
       </h5>
       <h5
         style={{
-          width: `5.5rem`,
+          width: `auto`,
           padding: `.5rem .5rem .5rem 0`,
           marginTop: 0,
         }}
@@ -50,7 +50,7 @@ const Layout = ({ children }) => {
           twitter
         </a>
       </h5>
-      <h5 style={{ width: `5.5rem`, padding: `.5rem`, marginTop: 0 }}>
+      <h5 style={{ width: `auto`, padding: `.5rem`, marginTop: 0 }}>
         <a
           alt="martin-cartledge-github"
           href="https://github.com/martincartledge"
@@ -64,7 +64,7 @@ const Layout = ({ children }) => {
           github
         </a>
       </h5>
-      <h5 style={{ width: `5.5rem`, padding: `.5rem`, marginTop: 0 }}>
+      <h5 style={{ width: `auto`, padding: `.5rem`, marginTop: 0 }}>
         <a
           alt="martin-cartledge-dev-to"
           href="https://dev.to/spindriftboi"
@@ -78,7 +78,7 @@ const Layout = ({ children }) => {
           dev.to
         </a>
       </h5>
-      <h5 style={{ width: `5.5rem`, padding: `.5rem`, marginTop: 0 }}>
+      <h5 style={{ width: `auto`, padding: `.5rem`, marginTop: 0 }}>
         <a
           alt="martin-cartledge-medium"
           href="https://medium.com/@spindriftboi"
