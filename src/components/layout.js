@@ -7,15 +7,17 @@ const Layout = ({ children }) => {
     <ul
       style={{
         display: `flex`,
-        justifyContent: `space-between`,
+        justifyContent: `start`,
         flexWrap: `wrap`,
+        marginLeft: 0,
       }}
     >
       <h5
         style={{
           fontFamily: `Montserrat, sans-serif`,
-          width: `5.5rem`,
+          width: `100%`,
           padding: `.5rem .5rem .5rem 0`,
+          marginTop: 0,
         }}
       >
         <a
@@ -28,7 +30,13 @@ const Layout = ({ children }) => {
           martin cartledge
         </a>
       </h5>
-      <h5 style={{ width: `5.5rem`, padding: `.5rem` }}>
+      <h5
+        style={{
+          width: `5.5rem`,
+          padding: `.5rem .5rem .5rem 0`,
+          marginTop: 0,
+        }}
+      >
         <a
           alt="martin-cartledge-twitter"
           href="https://twitter.com/spindriftboi"
@@ -42,7 +50,7 @@ const Layout = ({ children }) => {
           twitter
         </a>
       </h5>
-      <h5 style={{ width: `5.5rem`, padding: `.5rem` }}>
+      <h5 style={{ width: `5.5rem`, padding: `.5rem`, marginTop: 0 }}>
         <a
           alt="martin-cartledge-github"
           href="https://github.com/martincartledge"
@@ -54,6 +62,34 @@ const Layout = ({ children }) => {
           }}
         >
           github
+        </a>
+      </h5>
+      <h5 style={{ width: `5.5rem`, padding: `.5rem`, marginTop: 0 }}>
+        <a
+          alt="martin-cartledge-dev-to"
+          href="https://dev.to/spindriftboi"
+          target="_blank"
+          style={{
+            boxShadow: `none`,
+            color: `#cc6b87`,
+            fontFamily: `Montserrat, sans-serif`,
+          }}
+        >
+          dev.to
+        </a>
+      </h5>
+      <h5 style={{ width: `5.5rem`, padding: `.5rem`, marginTop: 0 }}>
+        <a
+          alt="martin-cartledge-medium"
+          href="https://medium.com/@spindriftboi"
+          target="_blank"
+          style={{
+            boxShadow: `none`,
+            color: `#cc6b87`,
+            fontFamily: `Montserrat, sans-serif`,
+          }}
+        >
+          medium
         </a>
       </h5>
     </ul>

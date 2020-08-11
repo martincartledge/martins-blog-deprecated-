@@ -51,7 +51,7 @@ const SignUpForm = () => {
               }}
               onClick={() => setShowForm(true)}
             >
-              Click here to subscribe to my newsletter.
+              Click here to subscribe to my newsletter
             </a>
           </h5>
         </>
@@ -79,14 +79,14 @@ const SignUpForm = () => {
             htmlFor="email"
             style={{ fontFamily: `Montserrat, sans-serif`, fontWeight: 900 }}
           >
-            Email:
+            email:
           </label>
           <div>
             <input
               type="email"
               name="email"
               className="inp"
-              placeholder="shrutefarms@gmail.com   🏒"
+              placeholder="🏒"
               id="email"
               value={email}
               onChange={e => setEmail(e.target.value)}
@@ -104,7 +104,7 @@ const SignUpForm = () => {
                 width: `auto`,
               }}
             >
-              Subscribe
+              subscribe
             </button>
           </div>
         </form>
