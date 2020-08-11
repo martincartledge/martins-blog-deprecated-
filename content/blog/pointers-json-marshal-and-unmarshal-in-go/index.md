@@ -1,7 +1,7 @@
 ---
 title: Pointers, Marshalling, and Unmarshalling Data in Go
 date: "2020-07-15T22:40:32.169Z"
-description: "Learning Go - Week 9 - Pointers, JSON Marshal and Unmarshal in Go"
+description: "Learning Go Week 9 - Pointers and Marhsalling/Unmarshalling JSON"
 ---
 
 This is the ninth entry of my weekly series _Learning Go_. Last week I covered [_How to Write a Recursive Function in Go_](https://www.martincartledge.io/how-to-write-a-recursive-function-in-go/). This week I am going to talk about _Pointers, JSON Marshal and Unmarshal_.

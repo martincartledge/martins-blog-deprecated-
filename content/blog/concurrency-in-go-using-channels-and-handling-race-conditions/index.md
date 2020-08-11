@@ -1,7 +1,7 @@
 ---
 title: Concurrency in Go - Using Channels and Handling Race Conditions
 date: "2020-08-05T22:40:32.169Z"
-description: "Learning Go - Week 12"
+description: "Learning Go Week 12 - Channels, Mutex, Race Conditions"
 ---
 
 This is the twelfth entry of my weekly series _Learning Go_. Last week I talked about [using Goroutines and WaitGroups](https://www.martincartledge.io/concurrency-in-go-goroutines-and-wait-groups/) to make use of concurrent patterns in Go. This week I will continue to expand on the topic of concurrency by showing you how to use a few more useful features of Go: _Channels and Mutex_. I will also walk you through how you can identify and fix potential race conditions in your code. Let's get to it!

@@ -1,7 +1,7 @@
 ---
 title: Function Declarations, Arguments, Parameters, and Anonymous Functions in Go
 date: "2020-05-03T22:40:32.169Z"
-description: "Learning Go - Week 6"
+description: "Learning Go Week 6 - Functions, Arguments, Parameters"
 ---
 
 This is the sixth entry of my weekly series _Learning Go_. Last week I covered the `Struct` and `Interface` types. This week I will be talking about _Function Declarations, Arguments, Parameters, and Anonymous Functions_.

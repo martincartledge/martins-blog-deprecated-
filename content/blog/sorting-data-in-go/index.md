@@ -1,7 +1,7 @@
 ---
 title: Sorting Data in Go
 date: "2020-07-22T22:40:32.169Z"
-description: "Learning Go - Week 10"
+description: "Learning Go Week 10 - Sorting Data"
 ---
 
 This is the tenth entry of my weekly series _Learning Go_. Last week I talked about [Pointers, Marshalling, and Unmarshalling Data in Go](https://www.martincartledge.io/pointers-json-marshal-and-unmarshal-in-go/). This week I will be talking about how to sort your data in a Go Program. Let's get to it.
