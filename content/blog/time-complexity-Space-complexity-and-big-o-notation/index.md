@@ -35,19 +35,19 @@ Most of the time, if you're using _Constant Time_, you are in good shape from a 
 Let me show you an example in which I perform tasks that evaluate to _Constant Time_:
 
 ```js
-const jedi = ["luke", "anakin", "obi wan", "mace windu", "yoda", "darth vader"]
+const jedi = ["luke", "anakin", "obi wan", "mace windu", "yoda", "darth vader"];
 
 function findAJedi(jediList) {
-  console.log(jediList[1]) // O(1)
+  console.log(jediList[1]); // O(1)
 }
 
-findAJedi(jedi) // O(1)
+findAJedi(jedi); // O(1)
 ```
 
 First, I use the `const` keyword to declare a new variable with the identifier `jedi` and give this variable a collection of `string` values
 
 ```js
-const jedi = ["anakin", "luke", "obi wan", "mace windu", "yoda", "darth vader"]
+const jedi = ["anakin", "luke", "obi wan", "mace windu", "yoda", "darth vader"];
 ```
 
 Next, I use the `function` keyword to create a new function and give it the identifier `findAJedi`. This function will have a single parameter with an identifier of `jediList`
@@ -60,7 +60,7 @@ Using bracket notation `[]` I pull out the entry that is in index position `1`
 
 ```js
 function findAJedi(jediList) {
-  console.log(jediList[1]) // O(1)
+  console.log(jediList[1]); // O(1)
 }
 ```
 
@@ -69,7 +69,7 @@ Since we already know where the data we want is, and we do not have to loop to g
 We call the `findAJedi` function with the variable `jediList` as the single argument and our `findAJedi` function prints `anakin`. He is the chosen one, right?
 
 ```js
-findAJedi(jedi)
+findAJedi(jedi);
 // anakin
 ```
 
@@ -84,23 +84,23 @@ findAJedi(jedi)
 Let me show you an example of an operation that evaluates to `O(n)` or _Linear Time_:
 
 ```js
-const jedi = new Array(5).fill("luke")
+const jedi = new Array(5).fill("luke");
 
 function findLuke(jediList) {
   for (let i = 0; i < jediList.length; i++) {
     if (jediList[i] === "luke") {
-      console.log("found luke")
+      console.log("found luke");
     }
   }
 }
 
-findLuke(jedi)
+findLuke(jedi);
 ```
 
 First, we use the `const` keyword to create a new variable with the identifier `jedi` that is assigned the value of an `Array`. We use the `fill()` method to populate this `Array` with five `luke` values that are of type `string`
 
 ```js
-const jedi = new Array(100).fill("luke")
+const jedi = new Array(100).fill("luke");
 ```
 
 Next, we use the `function` keyword to create a new function with an identifier `findLuke`. This function will have a single parameter with an identifier of `jediList`
@@ -114,7 +114,7 @@ Inside of our `findLuke` function use the `for` keyword to create a `for` loop. 
 ```js
 for (let i = 0; i < jediList.length; i++) {
   if (jediList[i] === "luke") {
-    console.log("found luke")
+    console.log("found luke");
   }
 }
 ```
@@ -124,7 +124,7 @@ Since we are iterating through the entire `Array`, our Big O would be `O(n)`. Ri
 We call our `findLuke` function that takes a single argument `jedi` and since all of our entries are `luke`, we `console.log` `luke` five times
 
 ```js
-findLuke(jedi)
+findLuke(jedi);
 // found luke
 // found luke
 // found luke
@@ -144,23 +144,23 @@ I am sure that you have been here before, I know I sure have. Nesting loops is n
 Let me show you an example of a function that produces a Big O of `O(n^2)`:
 
 ```js
-const jedi = ["mace windu", "yoda", "obi wan"]
+const jedi = ["mace windu", "yoda", "obi wan"];
 
 function logJediDuos(jediList) {
   for (let i = 0; i < jediList.length; i++) {
     for (let j = 0; j < jediList.length; j++) {
-      console.log(jediList[i], jediList[j])
+      console.log(jediList[i], jediList[j]);
     }
   }
 }
 
-logJediDuos(jedi)
+logJediDuos(jedi);
 ```
 
 First, we use the `const` keyword to create a new variable with the identifier `jedi` that is assigned to an `Array` of three `string` values
 
 ```js
-const jedi = ["mace windu", "yoda", "obi wan"]
+const jedi = ["mace windu", "yoda", "obi wan"];
 ```
 
 Next, we use the `function` keyword to create a new function with an identifier of `logJediDuos`. This function has a single parameter `jediList`
@@ -182,7 +182,7 @@ Using bracket notation `[]` we use our index variables `i` and `j` to `console.l
 ```js
 for (let i = 0; i < jediList.length; i++) {
   for (let j = 0; j < jediList.length; j++) {
-    console.log(jediList[i], jediList[j])
+    console.log(jediList[i], jediList[j]);
   }
 }
 ```
@@ -190,7 +190,7 @@ for (let i = 0; i < jediList.length; i++) {
 When we invoke our `logJediDuos` function we get this result:
 
 ```js
-logJediDuos(jedi)
+logJediDuos(jedi);
 // mace windu mace windu
 // i = 0, j = 0
 // mace windu yoda
@@ -302,12 +302,12 @@ Let me show you an example of calculating Big O while using multiple collections
 
 ```js
 function printJediAndSith(jediList, sithList) {
-  jediList.forEach(jedi => console.log(jedi))
+  jediList.forEach(jedi => console.log(jedi));
 
-  sithList.forEach(sith => console.log(sith))
+  sithList.forEach(sith => console.log(sith));
 }
 
-printJediAndSith(["anakin", "obi wan"], ["vader", "sidious"])
+printJediAndSith(["anakin", "obi wan"], ["vader", "sidious"]);
 
 // O(a + b)
 ```
@@ -321,9 +321,9 @@ function printJediAndSith(jediList, sithList) {
 Inside of `printJediAndSith` we call the `forEach()` method on the `jediList` array and the `sithList` array
 
 ```js
-jediList.forEach(jedi => console.log(jedi))
+jediList.forEach(jedi => console.log(jedi));
 
-sithList.forEach(sith => console.log(sith))
+sithList.forEach(sith => console.log(sith));
 ```
 
 Now, what do you think the Big O is of the `printJediAndSith` function? Since we iterate through a collection of data it should be `O(n)`, right? Not in this case.
@@ -338,16 +338,16 @@ Let me show you an example of _dropping non-dominants_:
 
 ```js
 function printAndSumJediAttendance(jediList) {
-  jediList.forEach(list => console.log(list))
+  jediList.forEach(list => console.log(list));
 
   jediList.forEach(firstList => {
     jediList.forEach(secondList => {
-      console.log(firstList + secondList)
-    })
-  })
+      console.log(firstList + secondList);
+    });
+  });
 }
 
-printAndSumJediAttendance([1983, 66, 1138, 94, 1977])
+printAndSumJediAttendance([1983, 66, 1138, 94, 1977]);
 ```
 
 First, we create a new `function` with the identifier `printAndSumJediAttendance`, this function has a single parameter `jediList`
@@ -359,7 +359,7 @@ function printAndSumJediAttendance(jediList) {
 Inside of `printAndSumJediAttendance` we call the `forEach()` method on the `jediList` parameter. Because we are iterating through a collection of data this Big O evaluates to `O(n)`.
 
 ```js
-jediList.forEach(list => console.log(list))
+jediList.forEach(list => console.log(list));
 ```
 
 On the next line, we call the `forEach()` method on our `jediList` parameter. Inside of this `forEach` block, we call `forEach` on `jediList` again. Because we are iterating through nested loops, our Big O evaluates to `O(n^2)`
@@ -367,9 +367,9 @@ On the next line, we call the `forEach()` method on our `jediList` parameter. In
 ```js
 jediList.forEach(firstList => {
   jediList.forEach(secondList => {
-    console.log(firstList + secondList)
-  })
-})
+    console.log(firstList + secondList);
+  });
+});
 ```
 
 Let me break this Big O calculation down a bit:
@@ -377,14 +377,14 @@ Let me break this Big O calculation down a bit:
 ```js
 function printAndSumJediAttendance(jediList) {
   // O(n)
-  jediList.forEach(list => console.log(list))
+  jediList.forEach(list => console.log(list));
 
   // O(n^2)
   jediList.forEach(firstList => {
     jediList.forEach(secondList => {
-      console.log(firstList + secondList)
-    })
-  })
+      console.log(firstList + secondList);
+    });
+  });
 }
 // O(n + n^2) -> simplified -> O(n^2)
 ```
@@ -408,16 +408,16 @@ Let me show you an example of how we would calculate the space complexity:
 
 ```js
 function buildALightsaber(pieces) {
-  let totalPieces = 0 // O(1)
-  totalPieces = 4 // O(1)
+  let totalPieces = 0; // O(1)
+  totalPieces = 4; // O(1)
 
   for (let i = 0; i < pieces.length; i++) {
     // O(n)
-    addCrystals() // O(n)
-    const hasTheForce = true // O(n)
-    totalPieces++ // O(n)
+    addCrystals(); // O(n)
+    const hasTheForce = true; // O(n)
+    totalPieces++; // O(n)
   }
-  return totalPieces // O(1)
+  return totalPieces; // O(1)
 }
 
 // O(3 + 4n) -> simplified -> O(n)
