@@ -2,6 +2,10 @@
   cursor: pointer;
 }
 
+a {
+  color: #cc6b87;
+}
+
 .inp {
   border: none;
   border-bottom: 1px solid #cc6b87;
