@@ -171,7 +171,7 @@ Helpful tools:
 
 ### Side projects
 
-This is something else that I am sure you have heard a million times, but I do think these can really help you not stand out as a candidate, but help you stay engaged on days you don't feel like practicing your coding skills.
+This is something else that I am sure you have heard a million times, but I do think these can really help you not only stand out as a candidate but help you stay engaged on days you don't feel like practicing your coding skills.
 
 In my experience, it has been easier to get started when you can think of answers to both of these two questions:
 
@@ -180,7 +180,7 @@ In my experience, it has been easier to get started when you can think of answer
 
 With the answer to these two questions, you have a framework for your project! Do you like the new look of Twitter? Pick a feature and try to recreate the look and feel of it! Can't find a habit tracker app you like? Try building one yourself!
 
-If you would prefer to contribute to a project that is already established, that's great as well! This can be a daunting task if it is your first time; however, there is a great website that lists tons of projects on Github that are looking for first time contributors. [View that right here!](https://firstcontributions.github.io/)
+If you would prefer to contribute to a project that is already established, that's great as well! This can be a daunting task if it is your first time; however, there is a great website that lists tons of projects on Github that are looking for first-time contributors. [View that right here!](https://firstcontributions.github.io/)
 
 Helpful tools:
 
