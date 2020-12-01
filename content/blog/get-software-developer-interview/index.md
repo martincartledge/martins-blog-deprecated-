@@ -260,3 +260,5 @@ Whether you are new to the field and are looking for your first job, or you are 
 The job hunt can be a daunting, exhausting process. But remember, it is a marathon, not a race. You got this. Consistency is key. Every rejection is an opportunity to improve your skills for the job you were meant for.
 
 If you are struggling with any aspect of the job hunt, please feel free to [send me an email](mailto:martin@hey.com).
+
+If you enjoyed this blog, please keep a lookout for the next entry in the Interview Insights series. My next article will be focused on preparing for technical interviews, look for that in 2 weeks. Thank you for reading!
