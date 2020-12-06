@@ -1,184 +1,264 @@
 ---
-title: How to Prepare for a Software Developer Interview
-date: "2020-12-07T22:40:32.169Z"
-description: "Interview Insights Pt 2 - Preparing for the Interview"
+title: How to Get an Interview as a Software Developer
+date: "2020-11-30T22:40:32.169Z"
+description: "Interview Insights Pt 1 - Getting the Interview"
 ---
 
-This is the second post in my series _Interview Insights_. In my last post, I shared my thoughts on [how to get an interview as a software developer](https://www.martincartledge.io/get-software-developer-interview/). This week, I will share my thoughts on how you should prepare for an interview. Tech interviews are notoriously nerve-racking and unpredictable; however, there are steps you can take to mitigate a lot of these feelings.
+In this article, I will share the steps you should take to increase your chances of getting an interview as a software developer.
 
-## Phases of the interview process
+Whether you are just starting out, or looking for something new, I am confident that you will find value in what I share below.
 
-> the modern foundation of software interviews
+I'll be sharing other _interview insights_ in future articles, as well. So look out for them over the coming weeks.
 
-- Phone screen
-- Technical phone interview
-- On-site
+Alright, let’s get started!
 
-### Phone screen
+## How to determine your ideal role
 
-> "tell me about yourself"
+This might sound strange, but I think it is a question that is often overlooked.
 
-After you apply and a company has an interest in you, the first step is usually to schedule a _phone interview_. This is usually a pretty relaxed conversation with a member of HR. You can expect them to ask primarily about your job history, what you are looking for next, and most importantly, why you are applying for a position at their company.
+Due to the eclectic nature of our industry, it is common to just apply to _any_ kind of job.
 
-Just because this is typically _easier_ than the other phases of the interview process does not mean you should not prepare for it. A few questions to prepare for are:
+This is tricky because, on the one hand, you want interviews and experience with different technologies. But I have found that answering a few questions can put you ahead in your search. So what are those questions?
 
-##### Tell me a little bit about yourself
+> _What kind of developer do you want to be?_
 
-This is a good time to give your "elevator pitch". This will likely be one of the first questions you are asked and usually can be a great tone-setter for the remainder of the interview. If you tend to talk fast, take a deep breath before you answer and try to speak slowly and clearly. A few items you want to mention in your response are:
+If you are looking for your first job, this might be the hardest question you have to answer.
 
-- Ethos or interests you share with the company
-- What excites _you_ about software development
-- Future goals that (hopefully) this company can help fulfill (i.e. technical and professional growth)
+Although this might seem overly simplified, I do think it is most important to pick a niche of software that makes _you happy_. After all, you are the one that will be doing this work 40 hours a week, right?
 
-##### What is a recent project you worked on that you are proud of?
+If you are brand new to software development and are not sure what you like best, I suggest browsing [Free Code Camp](https://www.freecodecamp.org/), [Code Academy](https://www.codecademy.com/), [Treehouse](https://teamtreehouse.com/), or [Udemy](https://www.udemy.com/). Then take a course that sounds interesting to you.
 
-Like most of these questions, the interviewer is not solely curious about your technical achievements. They are also looking for queues that convey you can communicate well, are reliable, and someone that would get along with the other members of the team. Try to be enthusiastic and to answer questions fully, without rambling too much. An effective framework for answering these types of questions is mentioned below:
+It is easy to get caught in a state of limbo when you are not sure what to do next. My advice is when that happens is to just pick something and try it.
 
-- Give a quick overview of what the project is and the problem it solves
-- Mention the technologies you used in this project
-- Communicate any metrics that demonstrate any positive impact (i.e. time-saving metrics, open-source contributors, number of active users)
+> _What kind of company do you want to work for?_
 
-##### Why are you looking to leave your current company?
+This might be another tricky question to answer; however, it can really save you lots of headaches down the road.
 
-This might be one of the trickier questions to answer. Make sure you have a solid answer for this one prepared prior to the interview, it can tell a lot about a candidate pretty quickly. A few things to be avoided when answering this question:
+In software development, there are typically three _types_ of companies:
 
-- Being negative. Turn any potentially negative factor into a positive one. For example, "I am bored and unsatisfied with the work I do here" can be said, "I am looking for a new challenge that cultivates my growth as a developer and an individual".
-- Keep current coworkers or managers out of the conversation
-- Discussing compensation and benefits
+### Startups
 
-I think one of the best answers you can give to this question is an honest one, you are looking for something new. That is a perfectly reasonable answer! The only pieces I might add to this response is your interest in new challenges, enthusiasm for the company, or a piece of technology that you know this company uses.
+Startups typically have under 500 employees, are less than 5 years old, and embrace a fast-paced environment.
 
-### Technical phone screen
+Pros:
 
-> "what have you worked on?
+- You will play a large role in the problems that your company is trying to solve
+- You'll work with cutting edge technology in the industry
+- There will be lots of opportunities to learn from senior developers
 
-Generally, this step is a conversation with a senior member of the team you would join or the manager of that team. You can expect a lot of this conversation to be catered towards two things:
+Cons:
 
-- Recent problems you have experienced in your current position and the solutions you implemented for them
-- General language familiarity (i.e. when would you want to use an array instead of a hash map (object)?)
+- You'll be responsible for (you'll “own”) more pieces of the codebase
+- Processes such as code review and a team code style might not be established
+- You might have to quickly throw out code you contributed to because the team is trying out other ideas
 
-To help prepare for this interview, I suggest you start to write down answers to these questions. Personally, I have used an excel or google sheet document that consists of 3 columns: _questions_, _answers_, and _notes_. You will find that taking the action of writing your answers down will help you come up with a concise and impactful answer.
+### Mid-sized companies
 
-There are a lot of resources online that list common interview questions, for [frontend](https://github.com/h5bp/Front-end-Developer-Interview-Questions), [backend](https://github.com/arialdomartini/Back-End-Developer-Interview-Questions), or [full-stack](https://github.com/aershov24/full-stack-interview-questions) roles.
+A mid-sized company will typically have 500–5,000 employees and be at least 5 years old.
 
-This might seem like a lot of work upfront but trust me, spending the time to prepare and convert your thoughts to pen and paper will really help you mentally flush out your answers.
+Pros:
 
-### On-site
+- There's a high chance that the company will be profitable (job security)
+- There will be more onboarding resources and documentation
+- You'll have solidified planning strategies and clear goals for each quarter
 
-> the final step
+Cons:
 
-The final stage of the interview process is usually what is commonly referred to as the _on-site_. This is usually the most in-depth and the most important to perform well at.
+- More processes can mean more meetings and less time spent coding
+- A larger team can mean less individual input/direction of a project
+- It can be harder to adopt newer technologies due to legacy applications, and so on
 
-Depending on the company this interview can include various elements, but a few that are most common are:
+### Large corporations
 
-- Pair programming
-- Take-home assignments
-- Whiteboarding
+Large corporations typically have 5,000+ employees and are over 10 years old.
 
-One of the main questions the company would like to have a good answer for is, _how does this person work?_ The answer to this question is usually echoed through multiple levels as well, i.e. personal, technical, and professional.
+Pros:
 
-Companies seek this answer by giving the candidate various exercises, technical and interpersonal, to gauge your skills and how well you will fit in at their company.
+- They usually have the resources to pay higher salaries
+- Traditionally there's a more vetted process to get hired; therefore, lots of opportunity to learn from team members
+- Stock options (you benefit when your company benefits)
 
-#### Pair programming
+Cons:
 
-One of the most common methods of gauging your skills is to pair program with a member of the team you might work with. This session is usually 20 to 30 minutes and the problem you are given is generally something you will see on the job at this company. There are a few things to keep in mind if you have a session like this:
+- It tends to feel like you are a small fish in a large pond (contributions are not as tangible)
+- Career advancement (i.e. promotions, switching teams) can be a long-winded process
+- It's often harder to bond as a team if globally distributed
 
-- Try to stay calm and remember that _you are interviewing here for a reason_, they like you and see promise in you
-- Communicate out loud as much as possible, even if you think you are talking too much, it's better to over-communicate in these exercises than to sit in silence typing away with the keyboard
-- Don't be afraid to ask questions, they're on your side! The interviewer has probably left out critical details on purpose to test your communication skills while working with other developers
+All of these factors are good things to keep in mind when you're looking to switch companies or if you are looking to join your first company.
 
-Ultimately, try and be conscious of the fact that this company sees promise in you on a personal and technical level. Be yourself and be confident!
+### How do you learn more about a company?
 
-#### Take-home assignments
+A lot of resources have surfaced over the last 5–10 years that help folks get an “inside view” into a company’s interview process, culture, and salaries. A few that are particularly useful are:
 
-If the company wants to gauge your work through the lens of how you work as an individual, they might ask you to complete a take-home assignment.
+- [Glassdoor](https://www.glassdoor.com/): Employee reviews, interview experiences, and common salaries
+- [Blind](https://www.teamblind.com/): Anonymous employee reviews, interview experiences, common salaries, and employee referrals
+- [Levels.fyi](https://www.levels.fyi/): Title hierarchy, title comparisons to other companies, and common salaries
 
-These can range from completing timed exercises on HackRank to completing a small project with written instructions from the interviewer themselves.
+## Update Your Résumé
 
-Regardless of the style of take-home assignment, there are a few things I think you should keep in mind to increase your chances of success:
+I like to think that everyone on the job hunt has a personal billboard that they carry around with them. You can write on it, or decorate it however you like. That billboard is your résumé.
 
-- Ensure you are in a distraction-free area for the entire allotted time
-- Put any distraction prone devices away
-- Read _all_ instructions to the problem(s), and then read them again
+What you decide to put on your personal billboard will greatly affect your chances of getting an interview or not. So here are some things to keep in mind when writing a résumé:
 
-If your assignment is timed and you do not think you will have enough time to finish, write comments throughout the assignment with what your next steps would be if you had more time. To be honest, a lot of these assignments are supposed to take longer than the scheduled time to complete.
+- Keep it short (1 page, 2 pages if you have 10+ years of experience)
+- Tailor your resume to the job you want
+- If past technology is not applicable, try to make it applicable or leave it out
+- Write 3-5 bullet points for each job
+- Make your contributions impactful by using metrics (Wrote a function that processed 10,000k data points, Cut down on processing time by 60%)
 
-The interviewer is always primarily focused on how you _communicate_, not that you can write code the fastest, or solve every algorithm you see.
+Keep in mind, a recruiter or HR representative will only spend 10-15 seconds scanning your resume, you do not have much time. You want to make sure you include details that will help illustrate that you can help this company.
 
-#### Whiteboarding
+With that being said, a few things you might want to leave out are:
 
-This method of interviewing might be the most talked about, and the most feared. If you are asked to use a whiteboard to solve a question remember this, they are (usually) far more interested in _how_ you communicate your problem-solving process, not that you can solve the problem.
+- A personal photo
+  - _Instead_: Make your name and the position you _want_ catch the eye
+- Graph representations of skill level
+  - _Instead_: Try replacing with a list of technologies sorted, starting with the highest comfort level
+  - _Or_: List your skills in alphabetical order and make skills you are best at _bold_
+- Listing jobs that are not relevant to the career field
+  - _Instead_: Use that space to expand on the experience you have in the software industry, if you don't have much experience yet, this is a great place to expand on a project(s) you have worked on
 
-If the problem they give you seems really hard, that is not because they are trying to stump you. They want to get a feel for how you tackle a hard problem. If you don't end up solving the problem, that does not mean you blew your chance. If you keep these things in mind during this exercise, it will increase your chances of impressing your interviewer:
+### Try out your résumé on a friend (or tool)
 
-- Repeat the question back to the interviewer
-- Ask clarifying question about edge cases
-- Confirm optimal results of the problem
-- Write your code legibly
-- Communicate each step you take
+Another great way to determine if your résumé conveys what you would like it to is to have a friend read it for 15 seconds.
 
-If you answered the question successfully by the time the session ends, ask your interviewer if that was the solution they commonly got. If not, ask what other candidates have done or what you could have done differently. This shows that you are engaged and curious.
+After that time is up, take the résumé and have them tell you what they remembered from it. This can be a company name, skill, or contact information.
 
-If you did not answer the question successfully, write comments throughout the code about where you might continue to find the solution if you had more time. Again, a lot of these sessions are not focused solely on getting the "right" answer, but to get a good idea of how you approach new problems.
+This is a great trial run to determine what grabs a person’s eye when they scan your résumé.
 
-## Picking a language
+Here are some helpful tools to improve your résumé:
 
-> embrace what you are comfortable with, stick to what you know
+- [Grammarly](https://www.grammarly.com/)
+- [Google Drive Resume Template (Serif)](https://docs.google.com/document/d/1ARVyybC5qQEiCzUOLElwAdPpKOK0Qf88srr682eHdCQ/edit)
+- [Google Drive Resume Template (Swiss)](https://docs.google.com/document/d/1WR_axh5A9t1jwER_5mFCIcr5I1oNqm4cB1PHAQEEWqc/edit)
 
-It is fairly common to want to use (or learn) multiple languages in our field; however, when preparing for an interview, it is best to stick with just one. This will help shift your focus from worrying about which language you will use, to thinking of problems you have solved with the language you are most comfortable with.
+## How to Conquer the Job Hunt
 
-Once you decide on a language, think of the mechanics the language offers that you could be better with. A good way to determine what to focus on is to think of a feature of the language that would serve you well in an interview.
+> "By failing to prepare you are preparing to fail" - Benjamin Franklin
 
-i.e. You are a JavaScript developer, and you are not at strong with ES6 syntax and features as you would like to be.
+Let’s just face it: the job hunt is an exhausting and grueling affair for most. I have found that the best way to approach the job search is to have two important things before you start:
 
-## Preparation tools
+- Goals (daily and weekly)
+- A plan of action (daily and weekly)
 
-Interviews in the tech industry are far from uniform, but I like to think of that as a positive. This keeps things interesting and can allow you to show off your skills in a new way.
+Let's talk about how you can establish both.
 
-When it comes to preparing for an interview, there are two categories of preparation to keep in mind:
+### Set Goals and Create a Plan
 
-#### Company specific topics / questions
+I know what you are thinking, _ummm, my goal is to get a new job?_ Of course this is the end goal; however, in my experience, spending the time to determine what your goals are early is a great way to feel productive and confident.
 
-Depending on the size and type of company you are interviewing at, the way they interview might differ. I suggest you use websites such as [Blind](https://www.teamblind.com/) or [Glassdoor](https://www.glassdoor.com/) to gain insight into company-specific interview topics and questions.
+The reason I broke down these goals into two categories is that it is important to feel like you are being productive every day, even if you are not getting emails or calls back.
 
-#### General topics / questions
+Some examples I have used in the past for daily and weekly goals are:
 
-You can expect these questions to touch on your work style, recent achievements, and your technical competency. A few topics that you can expect to be asked about are:
+##### Daily Goals:
 
-- Tell me about a time that you had to deal with a tricky bug. How did you fix it? What was the outcome?
-- Do you prefer to work by collaborating (pairing) with others or on your own?
-- What do you like about the programming language you use?
-- Which new features of the language do you use most and why?
-- Describe your team's typical workflow for a project. What do you like about it? What don't you like about it?
+- Submit 10 applications
+- Spend 30 minutes on a side project
 
-Remember, stay positive as much as you can. Although the interviewer genuinely interesting in your responses, they are also looking for any signs of negativity or difficulty you might bring into their current team dynamic.
+##### Weekly Goals:
 
-Try to avoid talking down about a particular piece of technology you have used in the past. Instead, spin your response in a positive way.
+- Schedule a phone interview
+- Spend 2 hours on technical interview prep
 
-For example, instead of saying "I don't like using the spread operator in JavaScript, it's too confusing.", you can say, "I know the spread operator is a newer feature of JavaScript, I look forward to learning more about it and how to use it efficiently in my code."
+These might seem overly simplified and, you're right! That is the idea. You want to make sure you make your daily and weekly goals something that is easily measurable, and _sustainable_.
 
-## Mock interviews
+## Make the most of your time
 
-> practice without the pressure
+So far we have talked about the importance of determining your ideal role, refining your resume, and setting a schedule for yourself. To ensure that these tasks are not wasted effort, you want to make sure you are making the most of your time.
 
-Have you ever practiced a big presentation for school in front of friends or family? You might have still been nervous but, it sure does help you feel more comfortable speaking about your topic.
+What do I mean by that? Think of the old sayings _Set yourself up for success_ or _Put the right foot forward_. Basically, you want to make sure you are equally balanced in your journey to getting more interviews and being successful at them.
 
-Interviewing is also a presentation, and the concept of practice runs are just as important. In the 2020 world, most interviews are completed remotely, which makes performing mock interviews feel more _real_.
+Besides doing the items mentioned above, a few others that can carry great importance are:
 
-If you know someone who is currently in the software industry, I would ask them if they would be willing to set aside an hour or so a week to perform these mock interviews with you. If they currently work in a similar role that you are interviewing for, even better!
+- Practice what you're learning (and what you already know)
+- Work on side projects
+- Develop an online presence
 
-A few other options are [Pramp](https://www.pramp.com/) and [CodeInterview](https://codeinterview.io/). These sites allow you to schedule an interview, pick a primary focus (topic), language, and area of expertise (frontend, backend, etc). These platforms also give you more flexibility so you do not have to worry about scheduling time with someone you personally know.
+### Practice What You're Learning
 
-Interviews are nerve-racking; however, I am confident as you complete more, your confidence and comfort level will increase.
+Out of all the things I mention in this post, this one should come as the least of a surprise.
 
-## The day before
+To get better at coding, problem-solving, interviewing, or underwater basket weaving you have to _practice_, A LOT. There is no getting around this step. I, like many, have fell victim to a cycle of planning too much, taking too many tutorials, or telling myself _I'll start tomorrow_.
 
-It might be tempting for candidates to cram as many Leetcode problems or whiteboard questions the day before, but I believe the best thing you can do for your mind is to rest.
+For me, this was, and still is the hardest part about preparing for interviews, or quite honestly just being in this industry in general. Things move really quickly, and no one wants to feel like they are falling behind.
 
-Celebrate your achievement, getting interviews is not an easy task. Be nice to yourself. Relax and spend the day doing any activity that brings you joy and (ideally) relaxes you.
+But, tech is a mentally draining profession. It is more than understandable that the thought of practicing coding interview questions in any capacity is exhausting.
 
-This might sound counterintuitive, but I think it is the farthest thing from it. You will need your brain to work well at your interview; therefore, giving it rest the day before is exactly what it needs.
+I have some good news though. When you think about practicing, try to think of your current skills as water in a bucket.
+
+All experiences, good or bad, frustrating or rewarding, fill this bucket up and make _you_ a stronger developer _every day_.
+
+I think a great way to get into the habit of practicing writing code is to give yourself a goal per week. Remember, the ultimate goal is to practice and stay consistent, so avoid setting the bar at an unrealistic level for yourself. All this will do is make you feel bad on days you just don't feel like coding.
+
+Remember, you are the only person like you. There will never be anyone else like you, and that is awesome. So be nice to yourself, this stuff is hard.
+
+If you make a habit to practice just a little bit, each time that bucket will fill up and you will surprise yourself after just a few weeks of staying consistent. You got this!
+
+Here are some helpful tools to get you in the habit of practicing consistently:
+
+- [Free Code Camp](https://www.freecodecamp.org/)
+- [Leetcode](https://leetcode.com/)
+- [Code Academy](https://www.codecademy.com/)
+
+### Work on Side Projects
+
+This is something else that I am sure you have heard a million times, but I do think these can really help you not only stand out as a candidate but help you stay engaged on days you don't feel like practicing your coding skills.
+
+In my experience, it has been easier to get started when you can think of answers to both of these two questions:
+
+- What tech do I want to learn or get better at?
+- What is a product I really like, or I wish existed?
+
+With the answer to these two questions, you have a framework for your project! Do you like the new look of Twitter? Pick a feature and try to recreate the look and feel of it! Can't find a habit tracker app you like? Try building one yourself!
+
+If you would prefer to contribute to a project that is already established, that’s great as well. This can be a daunting task if it is your first time. But [there is a great website](https://firstcontributions.github.io/) that lists tons of projects on Github that are looking for first-time contributors. So check it out.
+
+Here are some other helpful tools:
+
+- ["12 Great Ideas for Programming Projects That People Will Use" By Filipe Silva](https://medium.com/better-programming/12-ideas-for-programming-projects-too-dangerous-not-to-build-514e3212ab77)
+- ["app-ideas" By Florin Pop](https://github.com/florinpop17/app-ideas)
+
+### Develop an Online Presence
+
+I like to think of the web as another place that allows us to have our own "personal billboard". There are many advantages to having a solid presence online, some of them include:
+
+- Networking/meeting other developers
+- Showing off projects
+- Potential interest from other companies
+
+Putting in the extra effort to make your online presence solid can take you a long way, and the ways you can achieve this are relatively straightforward. Here are a few things I suggest you do:
+
+##### Build a portfolio site
+
+This does not have to be an extravagant, complicated website if you do not want it to be. As long as it has contact information, links to your various profiles, and a blurb about yourself you should be good-to-go.
+
+This can be a great place to showcase your technical skills or talk about your passions and work history too.
+
+#### Get a personalized URL
+
+A lot of common websites developers use (Github, LinkedIn, Medium, Dev.to, Twitter, etc) allow you to change your URL, I suggest you make it your user name. I would also suggest to try and use the same name for each website.
+
+#### Start a blog
+
+If you are not interested in building projects and would prefer writing, this is a great way to show your skills and build an audience.
+
+#### Have a consistent profile photo
+
+Ideally you want to use a photo that is professional, but lets your personality shine through as well. Once you find one, try to use that same photo across your websites as well.
+
+#### Be active on social media
+
+This is certainly not a requirement; however, if you want to leverage social media as a platform for your development, I suggest you post about things you learn and try to engage your audience often.
+
+Finding the balance of letting your personality show while also adding value via sharing your knowledge can be tricky, but your followers will appreciate it!
 
 ## In Summary
 
-If you are reading this because you are going to start to prepare for an interview, congrats! I hope my insight can help in your preparation and your headspace as you approach your big day. Ultimately, remember to take a deep breath, relax, and be confident in yourself! Whoever you interview with sees promise in your skills. You got this!
+Whether you are new to the field and are looking for your first job, or you are an experienced developer looking for a new challenge, I hope these insights help.
+
+The job hunt can be a daunting, exhausting process. But remember, it is a marathon, not a race. You got this. Consistency is key. Every rejection is an opportunity to improve your skills for the job you were meant for.
+
+If you are struggling with any aspect of the job hunt, please feel free to [send me an email](mailto:martin@hey.com).
+
+If you enjoyed this blog, please keep a lookout for the next entry in the Interview Insights series. My next article will be focused on preparing for technical interviews, look for that in 2 weeks. Thank you for reading!
