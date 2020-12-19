@@ -218,7 +218,7 @@ function isAnagram(firstStr, secondStr) {
 
 On the first few lines of our function block, we want to address a few edge cases, just like in the first example.
 
-Similar to `isAnagram`, we need to check that both parameters have truthy values i.e. _not_ `null`, `undefined`, etc. We can check for a falsy value by using the `!` operator. If `firstStr` or `secondStr` is falsy, we return `false`.
+Similar to `sameSquared`, we need to check that both parameters have truthy values i.e. _not_ `null`, `undefined`, etc. We can check for a falsy value by using the `!` operator. If `firstStr` or `secondStr` is falsy, we return `false`.
 
 ```js
 function isAnagram(firstStr, secondStr) {
