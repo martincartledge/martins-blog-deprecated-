@@ -39,7 +39,7 @@ Like last year, I plan to read 24 books. But you know what? If I don't reach tha
 My 2021 Book List:
 
 1. [Us Against You](https://www.goodreads.com/book/show/36373463-us-against-you?from_search=true&from_srp=true&qid=RCyCnb8k63&rank=2)
-2. [The Art of Communication](https://www.goodreads.com/book/show/44791606-the-art-of-communication)
+2. [A Separate Peace](https://www.goodreads.com/book/show/5148.A_Separate_Peace)
 3. [The Snake Continued to Eat Itself](https://www.goodreads.com/book/show/36673564-the-snake-continued-to-eat-itself)
 4. [Harry Potter and the Sorcerer's Stone](https://www.goodreads.com/book/show/3.Harry_Potter_and_the_Sorcerer_s_Stone)
 5. [Harry Potter and the Chamber of Secrets](https://www.goodreads.com/book/show/15881.Harry_Potter_and_the_Chamber_of_Secrets)
