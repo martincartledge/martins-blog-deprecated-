@@ -30,6 +30,16 @@ If you have friends or family that you care about, but you have not heard from t
 
 I spent too much of my time focused on what was 6 feet in front of me, and not enough time reaching out to the ones I love.
 
+## Rediscovering old hobbies
+
+I got my first skateboard on my 11th birthday, I can still remember unwrapping it and feeling indescribable joy as I rode down my driveway for the first time on it.
+
+I spent countless weekend days and weekday nights skating around with my friends. As I get older, I realize, maybe this is what they meant by _The Good Ole Days_?
+
+I stopped skating around the age of 17, but I always admired the effort that skateboarders put into their video parts and the culture surrounding it.
+
+This year, I watched the [Vans video "Alright, Ok"](https://www.youtube.com/watch?v=f4ZzHtww6Tc&t), and I immediately fell back in love with skateboarding.
+
 ## Books I enjoyed the most
 
 2020 was the year that [I fell in love with reading](https://www.martincartledge.io/book-list-2021/). For those moments in time, I forgot about the world we live in and focused solely on the new world I was apart of.
