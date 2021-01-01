@@ -1,7 +1,7 @@
 ---
 title: Year in Review
 date: "2020-12-31T22:40:32.169Z"
-description: "reflecting on the good and the bad of 2020"
+description: "Reflecting on the good and the bad of 2020"
 ---
 
 ![tillamook](https://i.imgur.com/z1m4443.jpg)
