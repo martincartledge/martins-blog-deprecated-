@@ -10,7 +10,7 @@ _Success_ is a funny word.
 
 It can drive someone completely insane or make them feel completely at peace.
 
-If you asked five different people what they consider _success_, you would probably get five different answers.
+If you asked five different people what they consider _success_ to be, you would probably get five different answers.
 
 I think that is a good thing though. I consider the meaning and pursuit of _success_ to be an art form, unique to every single person on the planet.
 
