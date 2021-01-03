@@ -4,7 +4,7 @@ date: "2021-01-02T22:40:32.169Z"
 description: "It's only a game, based around a real game, right?"
 ---
 
-![wall garden](https://i.imgur.com/kIHFVQD.jpg)
+![frozen lake](https://i.imgur.com/51pjkks.jpg)
 
 I was never one of those kids that _enjoyed_ or had much _interest_ in playing team sports. The only exception being a brief stint of flag football in the 3rd grade and street hockey in the 4th grade.
 
