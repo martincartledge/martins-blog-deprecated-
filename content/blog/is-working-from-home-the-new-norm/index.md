@@ -6,7 +6,9 @@ description: "Is in-person collaboration becoming a thing of the past?"
 
 ![coast](https://i.imgur.com/RpoYeaQ.jpg)
 
-I have spent about 4 years in the software development industry, and at that time I noticed that _working from home_ has become a bit of a taboo topic.
+I have spent about 4 years in the software development industry, and in that time I noticed that _working from home_ has become a bit of a taboo topic.
+
+Some people love it, some hate it, some are completely indifferent.
 
 The idea is pretty simple. Folks work from the comfort of their home, connect with their coworkers via Slack, Teams, etc, and collaborate using a slew of modern software.
 
@@ -36,7 +38,7 @@ As a life-long, self-identifying "introvert", I started to struggle mentally due
 
 For me, texts, slack messages, and the occasional video call did not suffice.
 
-This got more interesting as the pandemic went on. I started to read that companies like Twitter were pivoting to having more of their [workforce working permanently from home](https://www.washingtonpost.com/technology/2020/10/01/twitter-work-from-home/?arc404=true).
+This got more interesting as the pandemic went on. I started to read that companies like Twitter were pivoting to having more of their [workforce work permanently from home](https://www.washingtonpost.com/technology/2020/10/01/twitter-work-from-home/?arc404=true).
 
 To be perfectly honest, this didn't really excite me.
 
