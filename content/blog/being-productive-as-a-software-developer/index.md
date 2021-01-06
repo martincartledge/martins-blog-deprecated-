@@ -80,8 +80,8 @@ As always, every situation is different. There is a lot to consider when trying 
 
 My advice; however, is simple.
 
-Spend a little bit of time today to evaluate how you can schedule dedicate periods of in the future.
+Spend a little bit of time today to evaluate how you can schedule dedicated periods of time in the future.
 
-Once the focus frame is set, use small, dedicated periods of time without the pull of notifications.
+Once the focus groundwork is set, use small, dedicated periods of time without the pull of notifications.
 
 If you pair these two methods together, I am certain you will not only feel more productive but will feel more in control of your day.
