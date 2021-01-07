@@ -1,7 +1,7 @@
 ---
 title: Something Has to Change
 date: "2021-01-06T22:40:32.169Z"
-description: "We can not let history to repeat itself"
+description: "We can not let history repeat itself"
 ---
 
 ![capitol protests](https://img.buzzfeed.com/buzzfeed-static/static/2021-01/6/21/asset/a33e60e64038/sub-buzz-30566-1609967506-29.jpg)
