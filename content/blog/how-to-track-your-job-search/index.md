@@ -103,6 +103,10 @@ If you spend a little bit of time to jot down a few notes that you think would b
 
 More thorough preparation and thoughtful questions or experiences you discuss will always bode more favorable to the interviewer, it shows you have a *genuine* interest in the position/company.
 
+### The Final Product
+
+![job search spreadsheet](https://i.imgur.com/4ttyTjD.png)
+
 ### Next step: crush the interview!
 
 If you have spent time on the job search and tracked your journey, I can not promise you that you will get an interview at each company you apply for, however, I can promise you will feel more prepared and organized at each step along the way.
