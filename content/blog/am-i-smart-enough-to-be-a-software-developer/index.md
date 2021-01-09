@@ -24,7 +24,7 @@ There are so many different niches in this industry and it is not possible for o
 
 If you are currently employed as a software developer, let me take a moment to tell you this: *You are smart enough to be where you are*.
 
-Looking to break into the industry? Feel like you do not have what it takes If you work hard at it, you will land a job, *You are smart enough*.
+Looking to break into the industry? Feel like you do not have what it takes? If you work hard at it, you will land a job, *You are smart enough*.
 
 At the end of the day, we are all human beings.
 
