@@ -21,7 +21,20 @@ const BlogIndex = ({ data, location }) => {
           marginBottom: `5rem`,
         }}
       >
-        <SignUpForm />
+        <h5 style={{ marginTop: `0` }}>
+          <a
+            style={{
+              color: `#cc6b87`,
+              fontFamily: `Montserrat, sans-serif`,
+              boxShadow: `none`,
+              textDecoration: `underline`,
+            }}
+            href="https://linktr.ee/AtomicJoltMedia"
+          >
+            Click to listen to my podcast
+          </a>
+        </h5>
+        {/*<SignUpForm />*/}
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (

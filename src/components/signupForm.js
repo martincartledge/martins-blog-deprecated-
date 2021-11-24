@@ -47,7 +47,6 @@ const SignUpForm = () => {
                 fontFamily: `Montserrat, sans-serif`,
                 boxShadow: `none`,
                 textDecoration: `underline`,
-                color: `#cc6b87`,
               }}
               onClick={() => setShowForm(true)}
             >
