@@ -8,9 +8,6 @@ module.exports = {
     },
     description: `Martin Cartledge's blog about the things he learns in software development`,
     siteUrl: `https://martincartledge.io`,
-    social: {
-      twitter: `spindriftboi`,
-    },
   },
   plugins: [
     {
@@ -81,4 +78,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};

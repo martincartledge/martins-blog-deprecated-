@@ -1,13 +1,13 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import SignUpForm from "../components/signupForm"
-import { rhythm } from "../utils/typography"
+import React from "react";
+import { Link, graphql } from "gatsby";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import SignUpForm from "../components/signupForm";
+import { rhythm } from "../utils/typography";
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title
-  const posts = data.allMarkdownRemark.edges
+  const siteTitle = data.site.siteMetadata.title;
+  const posts = data.allMarkdownRemark.edges;
 
   return (
     <Layout location={location} title={siteTitle} style={{ background: `red` }}>
@@ -21,22 +21,9 @@ const BlogIndex = ({ data, location }) => {
           marginBottom: `5rem`,
         }}
       >
-        <h5 style={{ marginTop: `0` }}>
-          <a
-            style={{
-              color: `#cc6b87`,
-              fontFamily: `Montserrat, sans-serif`,
-              boxShadow: `none`,
-              textDecoration: `underline`,
-            }}
-            href="https://linktr.ee/AtomicJoltMedia"
-          >
-            Click to listen to my podcast
-          </a>
-        </h5>
         {/*<SignUpForm />*/}
         {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
+          const title = node.frontmatter.title || node.fields.slug;
           return (
             <article key={node.fields.slug}>
               <header>
@@ -62,14 +49,14 @@ const BlogIndex = ({ data, location }) => {
                 </div>
               </header>
             </article>
-          )
+          );
         })}
       </div>
     </Layout>
-  )
-}
+  );
+};
 
-export default BlogIndex
+export default BlogIndex;
 
 export const pageQuery = graphql`
   query {
@@ -94,4 +81,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

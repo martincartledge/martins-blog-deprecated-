@@ -1,6 +1,6 @@
-import React from "react"
+import React from "react";
 
-import { rhythm } from "../utils/typography"
+import { rhythm } from "../utils/typography";
 
 const Layout = ({ children }) => {
   const header = (
@@ -31,26 +31,8 @@ const Layout = ({ children }) => {
         </a>
       </h3>
       <h5
-        style={{
-          width: `auto`,
-          padding: `.5rem .5rem .5rem 0`,
-          marginTop: 0,
-        }}
+        style={{ width: `auto`, padding: `.5rem .5rem .5rem 0`, marginTop: 0 }}
       >
-        <a
-          alt="martin-cartledge-twitter"
-          href="https://twitter.com/spindriftboi"
-          target="_blank"
-          style={{
-            boxShadow: `none`,
-            color: `#cc6b87`,
-            fontFamily: `Montserrat, sans-serif`,
-          }}
-        >
-          twitter
-        </a>
-      </h5>
-      <h5 style={{ width: `auto`, padding: `.5rem`, marginTop: 0 }}>
         <a
           alt="martin-cartledge-github"
           href="https://github.com/martincartledge"
@@ -93,7 +75,7 @@ const Layout = ({ children }) => {
         </a>
       </h5>
     </ul>
-  )
+  );
 
   return (
     <div
@@ -111,7 +93,7 @@ const Layout = ({ children }) => {
       <header>{header}</header>
       <>{children}</>
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;
