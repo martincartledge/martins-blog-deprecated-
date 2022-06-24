@@ -74,6 +74,20 @@ const Layout = ({ children }) => {
           medium
         </a>
       </h5>
+      <h5 style={{ width: `auto`, padding: `.5rem`, marginTop: 0 }}>
+        <a
+          alt="martin-cartledge-freecodecamp"
+          href="https://www.freecodecamp.org/news/author/martin/"
+          target="_blank"
+          style={{
+            boxShadow: `none`,
+            color: `#cc6b87`,
+            fontFamily: `Montserrat, sans-serif`,
+          }}
+        >
+          freeCodeCamp
+        </a>
+      </h5>
     </ul>
   );
 
